@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MTR Studios | Home</title>
+
+  <!-- Fonts & Icon Sets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cinzel:wght@600;700;800&family=Orbitron:wght@700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Reenie+Beanie&family=Marck+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Core Global Styles & Page Styles -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="index.css">
+
+  <!-- Components CSS -->
+  <link rel="stylesheet" href="components/top-bar.css">
+  <link rel="stylesheet" href="components/header.css">
+  <link rel="stylesheet" href="components/footer.css">
+</head>
+<body>
+
+  <!-- Dynamic Component Injectors -->
+  <div id="top-bar-placeholder"></div>
+  <div id="header-placeholder"></div>
+
+  <!-- MAIN HERO SECTION -->
+  <main>
+    <section class="hero-container">
+      <div class="hero-badge">
+        <i class="fa-solid fa-crown"></i> Official Global Portal
+      </div>
+
+      <div class="typing-title-wrapper">
+        <h1 class="brush-typing-text" id="heroTypewriterText"></h1>
+      </div>
+
+      <p class="hero-subtext">
+        A Rakhi is not just a thread; it is a symbol of the unbreakable bond between a brother and sister. 
+        It carries years of love, countless childhood memories, precious moments shared together, and a promise to always stand by each other. 
+        No matter how far life takes us, this beautiful bond between a brother and sister will always remain close to the heart.
+
+        <br><br>राखी सिर्फ़ एक धागा नहीं, बल्कि भाई-बहन के अटूट रिश्ते की निशानी है। 
+        इसमें बरसों का प्यार, बचपन की अनगिनत यादें, साथ बिताए अनमोल पल और एक-दूसरे के लिए हमेशा साथ खड़े रहने का वादा जुड़ा होता है। 
+        ज़िंदगी चाहे हमें कितनी भी दूर ले जाए, भाई-बहन का यह खूबसूरत रिश्ता हमेशा दिल के करीब रहता है।
+      </p>
+
+      <div class="hero-btns">
+        <a href="pages/wishes.html" class="btn-cyan">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> Open Card Studio
+        </a>
+        <a href="pages/contact.html" class="btn-outline-gold">
+          <i class="fa-solid fa-briefcase"></i> Our Services
+        </a>
+      </div>
+    </section>
+
+    <!-- FLOATING FOUNDER DESK WIDGET -->
+    <div class="ceo-floating-trigger" id="ceoTrigger">
+      <button class="ceo-hide-handle" id="ceoHideBtn" title="Hide Widget" onclick="hideCeoWidget(event)"><i class="fa-solid fa-xmark"></i></button>
+      <div class="ceo-avatar-wrapper">
+        <img src="assets/images/Mukesh_Sah.jpeg" alt="Mukesh Sah Founder" class="ceo-avatar-mini">
+      </div>
+      <div class="ceo-trigger-text">
+        <span class="ceo-trigger-title">Founder Desk</span>
+        <span class="ceo-trigger-name">Mukesh Sah</span>
+      </div>
+    </div>
+
+    <!-- MINIMIZED TAB TO RE-OPEN -->
+    <div class="ceo-minimized-tab" id="ceoMinimizedTab" onclick="showCeoWidget()" title="Show Founder Desk">
+      <i class="fa-solid fa-user-tie"></i>
+      <span>Founder</span>
+    </div>
+
+    <!-- CEO MODAL POPUP -->
+    <div class="ceo-modal-overlay" id="ceoModalOverlay">
+      <div class="ceo-modal-card">
+        <button class="modal-close-btn" id="ceoModalClose" aria-label="Close Modal">&times;</button>
+
+        <div id="currentSongTitle" class="audio-song-title-topleft">
+          <i class="fa-solid fa-music"></i> <span>🎵 MTR Special Song 1</span>
+        </div>
+
+        <div class="ceo-modal-img-frame">
+          <span class="ceo-photo-sparkle-particle"></span>
+          <img src="assets/images/Mukesh_Sah.jpeg" alt="Mukesh Sah CEO" class="ceo-modal-img" id="ceoModalImg">
+          
+          <button id="prevPhotoBtn" class="img-nav-btn left-btn" onclick="navigateContent(-1)" title="Previous Photo & Song">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button id="nextPhotoBtn" class="img-nav-btn right-btn" onclick="navigateContent(1)" title="Next Photo & Song">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+          <button id="togglePlayBtn" onclick="toggleAudio()" class="play-pause-center-btn" title="Play / Pause">
+            <i class="fa-solid fa-pause" id="playPauseIcon"></i>
+          </button>
+        </div>
+
+        <h2 class="ceo-modal-title">Mukesh Sah</h2>
+        <p class="ceo-modal-subtitle">आपकी खुशियों का साथी — आपका भाई</p>
+
+        <audio id="backgroundAudio" preload="auto"></audio>
+
+        <blockquote class="ceo-modal-quote">
+            <strong id="typingHeading"></strong>
+            <br><br>
+            <span id="typingMessage"></span>
+        </blockquote>
+
+        <button class="btn-cyan btn-full" id="acceptBlessingsBtn">
+          <i class="fa-solid fa-heart"></i> Accept Blessings
+        </button>
+      </div>
+    </div>
+
+    <!-- ADVANCED FEATURE HIGHLIGHTS SECTION -->
+    <section class="features-section">
+      <div class="section-header">
+        <h2 class="brush-subtitle">रक्षा बंधन <span>क्यों है इतना खास?</span></h2>
+        <p class="section-desc-sub">भाई-बहन के अटूट रिश्ते, प्यार, यादों, हंसी और जीवनभर साथ निभाने वाले खूबसूरत बंधन का उत्सव।</p>
+      </div>
+
+      <div class="cards-container">
+        <!-- CARD 1 -->
+        <div class="feature-card">
+          <div class="card-header-flex">
+            <div class="card-icon"><i class="fa-solid fa-heart"></i></div>
+            <button class="expand-btn" aria-label="Toggle Details" onclick="toggleFeatureDetail(this)">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+          <h3 class="card-title-brush">प्यार का अटूट बंधन</h3>
+          <p class="card-desc">राखी भाई-बहन के उस अनमोल रिश्ते की निशानी है, जिसमें प्यार, अपनापन और एक-दूसरे के लिए हमेशा साथ रहने का भाव जुड़ा होता है।</p>
+          <div class="card-expand-content">
+            <hr class="drawer-divider">
+            <ul class="drawer-list">
+              <li><i class="fa-solid fa-check"></i> जो हर साल और मजबूत होता है</li>
+              <li><i class="fa-solid fa-check"></i> बिना कहे समझ आने वाला प्यार</li>
+              <li><i class="fa-solid fa-check"></i> दिलों को हमेशा जोड़े रखने वाला रिश्ता</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="feature-card">
+          <div class="card-header-flex">
+            <div class="card-icon"><i class="fa-solid fa-gift"></i></div>
+            <button class="expand-btn" aria-label="Toggle Details" onclick="toggleFeatureDetail(this)">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+          <h3 class="card-title-brush">राखी और प्यारी यादें</h3>
+          <p class="card-desc">राखी का त्योहार बचपन की शरारतों, साथ बिताए पलों और उन अनगिनत यादों को फिर से दिल के करीब ले आता है।</p>
+          <div class="card-expand-content">
+            <hr class="drawer-divider">
+            <ul class="drawer-list">
+              <li><i class="fa-solid fa-check"></i> बचपन की अनमोल यादें</li>
+              <li><i class="fa-solid fa-check"></i> साथ बिताए खूबसूरत पल</li>
+              <li><i class="fa-solid fa-check"></i> हर साल नई यादों की सौगात</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="feature-card">
+          <div class="card-header-flex">
+            <div class="card-icon"><i class="fa-solid fa-shield-heart"></i></div>
+            <button class="expand-btn" aria-label="Toggle Details" onclick="toggleFeatureDetail(this)">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+          <h3 class="card-title-brush">साथ निभाने का वादा</h3>
+          <p class="card-desc">रक्षा बंधन उस वादे की याद दिलाता है कि जिंदगी के हर सुख-दुख में भाई-बहन एक-दूसरे के साथ खड़े रहेंगे।</p>
+          <div class="card-expand-content">
+            <hr class="drawer-divider">
+            <ul class="drawer-list">
+              <li><i class="fa-solid fa-check"></i> हर परिस्थिति में एक-दूसरे का साथ</li>
+              <li><i class="fa-solid fa-check"></i> हर मुश्किल में एक-दूसरे की ताकत</li>
+              <li><i class="fa-solid fa-check"></i> उम्रभर निभाने वाला रिश्ता</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="feature-card">
+          <div class="card-header-flex">
+            <div class="card-icon"><i class="fa-solid fa-face-smile-beam"></i></div>
+            <button class="expand-btn" aria-label="Toggle Details" onclick="toggleFeatureDetail(this)">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+          <h3 class="card-title-brush">बहन की खास जगह</h3>
+          <p class="card-desc">बहन सिर्फ परिवार का हिस्सा नहीं होती, वह बचपन की साथी, राज़दार और जीवनभर साथ रहने वाली एक खास दोस्त भी होती है।</p>
+          <div class="card-expand-content">
+            <hr class="drawer-divider">
+            <ul class="drawer-list">
+              <li><i class="fa-solid fa-check"></i> उसकी मुस्कान से खुशियां बढ़ती हैं</li>
+              <li><i class="fa-solid fa-check"></i> हर राज़ की सबसे प्यारी राज़दार</li>
+              <li><i class="fa-solid fa-check"></i> जिंदगीभर की सबसे खास दोस्त</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="feature-card">
+          <div class="card-header-flex">
+            <div class="card-icon"><i class="fa-solid fa-face-laugh-beam"></i></div>
+            <button class="expand-btn" aria-label="Toggle Details" onclick="toggleFeatureDetail(this)">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+          <h3 class="card-title-brush">हंसी और साथ</h3>
+          <p class="card-desc">बचपन की नोकझोंक से लेकर बड़े होने तक, भाई-बहन का रिश्ता अनगिनत हंसी-मजाक और खूबसूरत पलों से भरा रहता है।</p>
+          <div class="card-expand-content">
+            <hr class="drawer-divider">
+            <ul class="drawer-list">
+              <li><i class="fa-solid fa-check"></i> नोंकझोंक और ढेर सारी हंसी</li>
+              <li><i class="fa-solid fa-check"></i> साथ बिताए अनगिनत पल</li>
+              <li><i class="fa-solid fa-check"></i> ऐसी यादें जो कभी पुरानी नहीं होतीं</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="feature-card">
+          <div class="card-header-flex">
+            <div class="card-icon"><i class="fa-solid fa-infinity"></i></div>
+            <button class="expand-btn" aria-label="Toggle Details" onclick="toggleFeatureDetail(this)">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+          <h3 class="card-title-brush">हमेशा साथ, हमेशा अपना</h3>
+          <p class="card-desc">समय और दूरी चाहे कितनी भी बदल जाए, भाई-बहन के बीच का प्यार और अपनापन हमेशा दिल के करीब बना रहता है।</p>
+          <div class="card-expand-content">
+            <hr class="drawer-divider">
+            <ul class="drawer-list">
+              <li><i class="fa-solid fa-check"></i> दूरी से कभी कम नहीं होता प्यार</li>
+              <li><i class="fa-solid fa-check"></i> जिंदगी के हर पड़ाव पर साथ</li>
+              <li><i class="fa-solid fa-check"></i> हमेशा दिल के करीब रहने वाला रिश्ता</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- Dynamic Scripts Engine -->
+  <script src="assets/js/app-loader.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
