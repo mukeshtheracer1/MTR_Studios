@@ -1,0 +1,1174 @@
+/* =========================================================
+   MTR STUDIOS HEADER
+   FINAL RESPONSIVE CSS
+   ========================================================= */
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+
+    overflow-x: hidden !important;
+}
+
+
+:root {
+    --mtr-topbar-height: 0px;
+    --mtr-header-height: 80px;
+}
+
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+#top-bar-placeholder {
+
+    position: fixed !important;
+
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    z-index: 9998 !important;
+
+    transform: translateY(0) !important;
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+
+    transition:
+        transform 0.35s ease,
+        opacity 0.3s ease,
+        visibility 0.3s ease !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* =========================================================
+   WHEN PAGE SCROLLS DOWN
+   TOP BAR HIDES
+   ========================================================= */
+
+body.mtr-scrolling-down #top-bar-placeholder {
+
+    transform: translateY(-110%) !important;
+
+    opacity: 0 !important;
+
+    visibility: hidden !important;
+
+    pointer-events: none !important;
+}
+
+
+/* =========================================================
+   MAIN HEADER
+   ========================================================= */
+
+.mtr-main-header {
+
+    position: fixed !important;
+
+    top: var(--mtr-topbar-height) !important;
+
+    left: 0 !important;
+    right: 0 !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    height: var(--mtr-header-height) !important;
+    min-height: var(--mtr-header-height) !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    z-index: 9999 !important;
+
+    box-sizing: border-box !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(24, 0, 6, 0.99) 0%,
+            rgba(38, 0, 8, 0.98) 100%
+        ) !important;
+
+    border-bottom:
+        1px solid rgba(255, 215, 0, 0.28) !important;
+
+    box-shadow:
+        0 6px 28px rgba(0, 0, 0, 0.45) !important;
+
+    transition:
+        top 0.35s ease !important;
+}
+
+
+/* =========================================================
+   SCROLL DOWN
+   HEADER TAKES TOP BAR POSITION
+   ========================================================= */
+
+body.mtr-scrolling-down .mtr-main-header {
+
+    top: 0 !important;
+}
+
+
+/* =========================================================
+   HEADER INNER
+   ========================================================= */
+
+.mtr-fluid-header-container {
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    height: 100% !important;
+
+    margin: 0 !important;
+
+    padding:
+        0 clamp(16px, 3vw, 55px) !important;
+
+    box-sizing: border-box !important;
+}
+
+
+.mtr-header-flex-wrapper {
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    height: 100% !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: space-between !important;
+
+    gap: 20px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* =========================================================
+   LOGO LEFT
+   ========================================================= */
+
+.mtr-logo-locked-left {
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: flex-start !important;
+
+    gap: 12px !important;
+
+    width: auto !important;
+
+    min-width: 0 !important;
+
+    max-width: 55% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    flex: 0 1 auto !important;
+
+    overflow: hidden !important;
+}
+
+
+.mtr-logo-locked-left > a {
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    flex: 0 0 auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    text-decoration: none !important;
+}
+
+
+.mtr-logo-locked-left .mtr-drawer-logo {
+
+    display: block !important;
+
+    width:
+        clamp(48px, 4vw, 62px) !important;
+
+    height: auto !important;
+
+    max-width: 62px !important;
+
+    object-fit: contain !important;
+
+    flex-shrink: 0 !important;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.mtr-brand-panel {
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    justify-content: center !important;
+
+    align-items: flex-start !important;
+
+    min-width: 0 !important;
+
+    max-width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    overflow: hidden !important;
+}
+
+
+.mtr-brand-title {
+
+    display: block !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    font-size:
+        clamp(18px, 1.5vw, 25px) !important;
+
+    line-height: 1.1 !important;
+
+    font-weight: 800 !important;
+
+    color: #ffd700 !important;
+
+    white-space: nowrap !important;
+
+    overflow: hidden !important;
+
+    text-overflow: ellipsis !important;
+}
+
+
+.mtr-brand-subtitle {
+
+    display: block !important;
+
+    margin: 4px 0 0 !important;
+    padding: 0 !important;
+
+    font-size:
+        clamp(8px, 0.7vw, 11px) !important;
+
+    line-height: 1.2 !important;
+
+    color: #f8d98c !important;
+
+    white-space: nowrap !important;
+
+    overflow: hidden !important;
+
+    text-overflow: ellipsis !important;
+}
+
+
+/* =========================================================
+   RIGHT AREA
+   ========================================================= */
+
+.mtr-menu-locked-right {
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: flex-end !important;
+
+    gap: 16px !important;
+
+    width: auto !important;
+
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    flex: 0 1 auto !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* =========================================================
+   DESKTOP NAV
+   ========================================================= */
+
+.mtr-desktop-nav-engine {
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: flex-end !important;
+
+    min-width: 0 !important;
+}
+
+
+.mtr-nav-ul {
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: flex-end !important;
+
+    gap: 4px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    list-style: none !important;
+}
+
+
+.mtr-nav-ul > li {
+
+    position: relative !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    list-style: none !important;
+}
+
+
+.mtr-nav-item {
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    gap: 7px !important;
+
+    padding:
+        10px 12px !important;
+
+    color: #ffffff !important;
+
+    text-decoration: none !important;
+
+    font-size:
+        clamp(12px, 0.85vw, 14px) !important;
+
+    font-weight: 600 !important;
+
+    line-height: 1 !important;
+
+    white-space: nowrap !important;
+
+    border-radius: 8px !important;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease !important;
+}
+
+
+.mtr-nav-item i {
+
+    color: #ffd700 !important;
+
+    flex-shrink: 0 !important;
+}
+
+
+.mtr-nav-item:hover,
+.mtr-nav-item.active {
+
+    color: #ffd700 !important;
+
+    background:
+        rgba(255, 215, 0, 0.09) !important;
+}
+
+
+/* =========================================================
+   DROPDOWN
+   ========================================================= */
+
+.mtr-has-dropdown {
+
+    position: relative !important;
+}
+
+
+.mtr-sub-dropdown-menu {
+
+    position: absolute !important;
+
+    top: calc(100% + 5px) !important;
+
+    left: 0 !important;
+
+    min-width: 230px !important;
+
+    margin: 0 !important;
+    padding: 8px !important;
+
+    background: #260007 !important;
+
+    border:
+        1px solid rgba(255, 215, 0, 0.25) !important;
+
+    border-radius: 9px !important;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.55) !important;
+
+    display: none !important;
+
+    z-index: 10000 !important;
+}
+
+
+.mtr-has-dropdown:hover
+.mtr-sub-dropdown-menu {
+
+    display: block !important;
+}
+
+
+.mtr-sub-dropdown-menu a {
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 10px !important;
+
+    padding:
+        10px 12px !important;
+
+    color: #ffffff !important;
+
+    text-decoration: none !important;
+
+    border-radius: 7px !important;
+
+    font-size: 13px !important;
+}
+
+
+.mtr-sub-dropdown-menu a:hover {
+
+    color: #ffd700 !important;
+
+    background:
+        rgba(255, 215, 0, 0.08) !important;
+}
+
+
+/* =========================================================
+   ACTION GROUP
+   ========================================================= */
+
+.mtr-action-group {
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: flex-end !important;
+
+    gap: 12px !important;
+
+    flex-shrink: 0 !important;
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.mtr-header-search-wrapper {
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 8px !important;
+
+    width: 130px !important;
+
+    padding:
+        8px 12px !important;
+
+    background:
+        rgba(255, 255, 255, 0.05) !important;
+
+    border:
+        1px solid rgba(255, 215, 0, 0.22) !important;
+
+    border-radius: 30px !important;
+
+    box-sizing: border-box !important;
+}
+
+
+.mtr-header-search-input {
+
+    width: 100% !important;
+
+    min-width: 0 !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    border: none !important;
+    outline: none !important;
+
+    background: transparent !important;
+
+    color: #ffffff !important;
+
+    font-size: 12px !important;
+}
+
+
+.mtr-header-search-input::placeholder {
+
+    color:
+        rgba(255, 255, 255, 0.55) !important;
+}
+
+
+/* =========================================================
+   HAMBURGER
+   ========================================================= */
+
+.mtr-hamburger-btn {
+
+    display: none !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    flex-direction: column !important;
+
+    gap: 5px !important;
+
+    width: 44px !important;
+    height: 44px !important;
+
+    min-width: 44px !important;
+    min-height: 44px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background:
+        rgba(88, 0, 13, 0.95) !important;
+
+    border:
+        1px solid rgba(255, 215, 0, 0.55) !important;
+
+    border-radius: 10px !important;
+
+    cursor: pointer !important;
+
+    flex-shrink: 0 !important;
+
+    z-index: 10001 !important;
+}
+
+
+.mtr-ham-line {
+
+    display: block !important;
+
+    width: 21px !important;
+    height: 2px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: #ffd700 !important;
+
+    border-radius: 20px !important;
+}
+
+
+/* =========================================================
+   MOBILE DRAWER BACKDROP
+   ========================================================= */
+
+.mtr-drawer-backdrop {
+
+    position: fixed !important;
+
+    inset: 0 !important;
+
+    width: 100vw !important;
+    height: 100dvh !important;
+
+    background:
+        rgba(0, 0, 0, 0.75) !important;
+
+    opacity: 0 !important;
+
+    visibility: hidden !important;
+
+    pointer-events: none !important;
+
+    z-index: 20000 !important;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease !important;
+}
+
+
+.mtr-drawer-backdrop.active {
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+
+    pointer-events: auto !important;
+}
+
+
+/* =========================================================
+   MOBILE DRAWER
+   ========================================================= */
+
+.mtr-mobile-drawer {
+
+    position: fixed !important;
+
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+
+    width:
+        min(360px, 88vw) !important;
+
+    height: 100dvh !important;
+
+    margin: 0 !important;
+    padding: 18px !important;
+
+    box-sizing: border-box !important;
+
+    overflow-x: hidden !important;
+
+    overflow-y: auto !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #180006 0%,
+            #330009 50%,
+            #180006 100%
+        ) !important;
+
+    border-left:
+        1px solid rgba(255, 215, 0, 0.28) !important;
+
+    box-shadow:
+        -20px 0 55px rgba(0, 0, 0, 0.65) !important;
+
+    transform:
+        translateX(105%) !important;
+
+    opacity: 0 !important;
+
+    visibility: hidden !important;
+
+    pointer-events: none !important;
+
+    z-index: 20001 !important;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.25s ease,
+        visibility 0.3s ease !important;
+}
+
+
+.mtr-mobile-drawer.active {
+
+    transform:
+        translateX(0) !important;
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+
+    pointer-events: auto !important;
+}
+
+
+/* =========================================================
+   DRAWER TOP
+   ========================================================= */
+
+.mtr-drawer-top {
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: space-between !important;
+
+    width: 100% !important;
+
+    min-height: 55px !important;
+
+    margin: 0 0 16px !important;
+
+    padding:
+        0 0 14px !important;
+
+    border-bottom:
+        1px solid rgba(255, 215, 0, 0.2) !important;
+}
+
+
+.mtr-drawer-top .mtr-drawer-logo {
+
+    width: auto !important;
+
+    max-width: 160px !important;
+
+    max-height: 48px !important;
+
+    object-fit: contain !important;
+}
+
+
+/* =========================================================
+   DRAWER CLOSE
+   ========================================================= */
+
+.mtr-drawer-close {
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    width: 40px !important;
+    height: 40px !important;
+
+    min-width: 40px !important;
+    min-height: 40px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background:
+        rgba(88, 0, 13, 0.9) !important;
+
+    color: #ffd700 !important;
+
+    border:
+        1px solid rgba(255, 215, 0, 0.4) !important;
+
+    border-radius: 50% !important;
+
+    font-size: 28px !important;
+
+    line-height: 1 !important;
+
+    cursor: pointer !important;
+}
+
+
+/* =========================================================
+   DRAWER NAV
+   ========================================================= */
+
+.mtr-mobile-drawer nav {
+
+    width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+.mtr-drawer-link {
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    width: 100% !important;
+
+    min-height: 48px !important;
+
+    margin: 5px 0 !important;
+
+    padding:
+        12px 14px !important;
+
+    box-sizing: border-box !important;
+
+    color: #ffffff !important;
+
+    text-decoration: none !important;
+
+    font-size: 15px !important;
+
+    border-radius: 9px !important;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+
+.mtr-drawer-link i {
+
+    width: 24px !important;
+
+    min-width: 24px !important;
+
+    margin-right: 10px !important;
+
+    color: #ffd700 !important;
+
+    text-align: center !important;
+}
+
+
+.mtr-drawer-link:hover,
+.mtr-drawer-link:active {
+
+    color: #ffd700 !important;
+
+    background:
+        rgba(255, 215, 0, 0.09) !important;
+}
+
+
+/* =========================================================
+   BODY OFFSET
+   ========================================================= */
+
+body {
+
+    padding-top:
+        calc(
+            var(--mtr-topbar-height)
+            + var(--mtr-header-height)
+        ) !important;
+}
+
+
+/* =========================================================
+   DRAWER OPEN
+   ========================================================= */
+
+body.mtr-drawer-open {
+
+    overflow: hidden !important;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media screen and (max-width: 1100px) {
+
+    .mtr-header-search-wrapper {
+
+        width: 110px !important;
+    }
+
+
+    .mtr-nav-item {
+
+        padding:
+            9px 8px !important;
+
+        font-size: 12px !important;
+    }
+
+
+    .mtr-menu-locked-right {
+
+        gap: 8px !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 900px) {
+
+    :root {
+
+        --mtr-header-height: 68px;
+    }
+
+
+    .mtr-main-header {
+
+        height:
+            var(--mtr-header-height) !important;
+
+        min-height:
+            var(--mtr-header-height) !important;
+
+        top:
+            var(--mtr-topbar-height) !important;
+    }
+
+
+    body.mtr-scrolling-down .mtr-main-header {
+
+        top: 0 !important;
+    }
+
+
+    .mtr-fluid-header-container {
+
+        height:
+            var(--mtr-header-height) !important;
+
+        padding:
+            0 12px !important;
+    }
+
+
+    .mtr-header-flex-wrapper {
+
+        height:
+            var(--mtr-header-height) !important;
+
+        gap: 8px !important;
+    }
+
+
+    /* LOGO */
+
+    .mtr-logo-locked-left {
+
+        max-width:
+            calc(100% - 54px) !important;
+
+        gap: 9px !important;
+
+        flex: 1 1 auto !important;
+    }
+
+
+    .mtr-logo-locked-left .mtr-drawer-logo {
+
+        width: 45px !important;
+
+        height: 45px !important;
+
+        max-width: 45px !important;
+
+        flex-shrink: 0 !important;
+    }
+
+
+    .mtr-brand-panel {
+
+        min-width: 0 !important;
+
+        max-width: 100% !important;
+    }
+
+
+    .mtr-brand-title {
+
+        font-size: 17px !important;
+
+        line-height: 1.05 !important;
+    }
+
+
+    .mtr-brand-subtitle {
+
+        font-size: 7px !important;
+
+        margin-top: 3px !important;
+    }
+
+
+    /* RIGHT */
+
+    .mtr-menu-locked-right {
+
+        width: auto !important;
+
+        min-width: 44px !important;
+
+        height:
+            var(--mtr-header-height) !important;
+
+        margin-left: auto !important;
+
+        flex-shrink: 0 !important;
+    }
+
+
+    .mtr-desktop-nav-engine {
+
+        display: none !important;
+    }
+
+
+    .mtr-header-search-wrapper {
+
+        display: none !important;
+    }
+
+
+    .mtr-action-group {
+
+        width: auto !important;
+
+        height: 100% !important;
+
+        gap: 0 !important;
+    }
+
+
+    .mtr-hamburger-btn {
+
+        display: flex !important;
+
+        width: 43px !important;
+        height: 43px !important;
+
+        min-width: 43px !important;
+        min-height: 43px !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 480px) {
+
+    .mtr-fluid-header-container {
+
+        padding:
+            0 9px !important;
+    }
+
+
+    .mtr-logo-locked-left {
+
+        gap: 7px !important;
+    }
+
+
+    .mtr-logo-locked-left .mtr-drawer-logo {
+
+        width: 42px !important;
+
+        height: 42px !important;
+
+        max-width: 42px !important;
+    }
+
+
+    .mtr-brand-title {
+
+        font-size: 16px !important;
+    }
+
+
+    .mtr-brand-subtitle {
+
+        font-size: 6.5px !important;
+    }
+
+
+    .mtr-hamburger-btn {
+
+        width: 41px !important;
+        height: 41px !important;
+
+        min-width: 41px !important;
+        min-height: 41px !important;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 360px) {
+
+    .mtr-logo-locked-left .mtr-drawer-logo {
+
+        width: 39px !important;
+
+        height: 39px !important;
+
+        max-width: 39px !important;
+    }
+
+
+    .mtr-brand-title {
+
+        font-size: 15px !important;
+    }
+
+
+    .mtr-brand-subtitle {
+
+        font-size: 6px !important;
+    }
+}

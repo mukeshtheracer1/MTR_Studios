@@ -1,0 +1,118 @@
+<!-- =========================================================
+     MTR STUDIOS — HEADER
+     ========================================================= -->
+
+<header class="mtr-main-header">
+  <div class="mtr-fluid-header-container">
+    <div class="mtr-header-flex-wrapper">
+
+      <!-- LOGO & BRAND -->
+      <div class="mtr-logo-locked-left">
+        <a href="#" onclick="window.location.href = window.location.pathname.includes('/pages/') ? '../index.html' : 'index.html'; return false;">
+          <img
+            src="../assets/images/mtr-global-logo.png"
+            alt="MTR Studios Logo"
+            class="mtr-drawer-logo"
+            onerror="this.src='https://ui-avatars.com/api/?name=MTR&background=58000d&color=ffd700';"
+          >
+        </a>
+
+        <div class="mtr-brand-panel">
+          <h1 class="mtr-brand-title">MTR STUDIOS</h1>
+          <div class="mtr-brand-subtitle">Celebrating Bonds & Beautiful Memories</div>
+        </div>
+      </div>
+
+      <!-- DESKTOP NAVIGATION -->
+      <div class="mtr-menu-locked-right">
+        <nav class="mtr-desktop-nav-engine">
+          <ul class="mtr-nav-ul">
+            <li>
+              <a href="#" class="mtr-nav-item active" onclick="window.location.href = window.location.pathname.includes('/pages/') ? '../index.html' : 'index.html'; return false;">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="mtr-nav-item" onclick="window.location.href = window.location.pathname.includes('/pages/') ? 'muhurat.html' : 'pages/muhurat.html'; return false;">
+                <i class="fa-solid fa-ribbon"></i>
+                <span>Rakhi Muhurat</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="mtr-nav-item" onclick="window.location.href = window.location.pathname.includes('/pages/') ? 'wishes.html' : 'pages/wishes.html'; return false;">
+                <i class="fa-solid fa-heart"></i>
+                <span>Wishes</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="mtr-nav-item" onclick="window.location.href = window.location.pathname.includes('/pages/') ? 'story.html' : 'pages/story.html'; return false;">
+                <i class="fa-solid fa-images"></i>
+                <span>Story</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="mtr-nav-item" onclick="window.location.href = window.location.pathname.includes('/pages/') ? 'contact.html' : 'pages/contact.html'; return false;">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- SEARCH & HAMBURGER -->
+        <div class="mtr-action-group">
+          <div class="mtr-header-search-wrapper">
+            <i class="fa-solid fa-magnifying-glass" style="color:var(--primary-gold);"></i>
+            <input type="text" class="mtr-header-search-input" placeholder="Search Rakhi wishes..." autocomplete="off">
+          </div>
+
+          <button class="mtr-hamburger-btn" id="mobileToggleBtn" aria-label="Open Menu" type="button">
+            <span class="mtr-ham-line"></span>
+            <span class="mtr-ham-line"></span>
+            <span class="mtr-ham-line"></span>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE NAVIGATION DRAWER -->
+<div class="mtr-drawer-backdrop" id="mtrDrawerBackdrop"></div>
+
+<aside class="mtr-mobile-drawer" id="mtrMobileDrawer">
+  <div class="mtr-drawer-top">
+    <img
+      src="../assets/images/mtr-global-logo.png"
+      alt="MTR Studios Logo"
+      class="mtr-drawer-logo"
+      onerror="this.src='https://ui-avatars.com/api/?name=MTR&background=58000d&color=ffd700';"
+    >
+    <button class="mtr-drawer-close" id="drawerCloseBtn" aria-label="Close Menu" type="button">&times;</button>
+  </div>
+
+  <nav style="margin-top: 1rem;">
+    <a href="#" class="mtr-drawer-link" onclick="window.location.href = window.location.pathname.includes('/pages/') ? '../index.html' : 'index.html'; return false;">
+      <i class="fa-solid fa-house"></i> Home
+    </a>
+    <a href="#" class="mtr-drawer-link" onclick="window.location.href = window.location.pathname.includes('/pages/') ? 'muhurat.html' : 'pages/muhurat.html'; return false;">
+      <i class="fa-solid fa-ribbon"></i> Rakhi Muhurat
+    </a>
+    <a href="#" class="mtr-drawer-link" onclick="window.location.href = window.location.pathname.includes('/pages/') ? 'wishes.html' : 'pages/wishes.html'; return false;">
+      <i class="fa-solid fa-heart"></i> Wishes
+    </a>
+    <a href="#" class="mtr-drawer-link" onclick="window.location.href = window.location.pathname.includes('/pages/') ? 'story.html' : 'pages/story.html'; return false;">
+      <i class="fa-solid fa-images"></i> Story
+    </a>
+    <a href="#" class="mtr-drawer-link" onclick="window.location.href = window.location.pathname.includes('/pages/') ? 'contact.html' : 'pages/contact.html'; return false;">
+      <i class="fa-solid fa-paper-plane"></i> Contact
+    </a>
+  </nav>
+</aside>
