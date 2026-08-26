@@ -3,10 +3,10 @@
    ========================================================================== */
 
 const playlist = [
-    { id: 1, title: "Bhaiya Mere Rakhi Ke", artist: "Shankar-Jaikishan", category: "rakhi", cover: "../assets/images/rakhi1.webp", audio: "../assets/music/song1.mp3" },
-    { id: 2, title: "Phoolon Ka Taron Ka ", artist: "Kishore Kumar", category: "rakhi", cover: "../assets/images/rakhi2.jpg", audio: "../assets/music/song2.mp3" },
-    { id: 3, title: "Dhaagon Se Baandhaa", artist: "श्रेया घोषाल", category: "rakhi", cover: "../assets/images/rakhi3.jpg", audio: "../assets/music/song3.mp3" },
-    { id: 4, title: "राखी का ये धागा", artist: "MTR Studios", category: "rakhi", cover: "../assets/images/rakhi4.png", audio: "../assets/music/song4.mp3" },
+    { id: 1, title: "Bhaiya Mere Rakhi Ke", artist: "Shankar-Jaikishan", category: "rakhi", cover: "../assets/images/rakhi1.webp", audio: "../assets/audio/song1.mp3" },
+    { id: 2, title: "Phoolon Ka Taron Ka ", artist: "Kishore Kumar", category: "rakhi", cover: "../assets/images/rakhi2.jpg", audio: "../assets/audio/song2.mp3" },
+    { id: 3, title: "Dhaagon Se Baandhaa", artist: "Shreya Ghoshal", category: "rakhi", cover: "../assets/images/rakhi3.jpg", audio: "../assets/audio/song3.mp3" },
+    { id: 4, title: "Rakhi Ka Ye Dhaga", artist: "MTR Studios", category: "rakhi", cover: "../assets/images/rakhi4.png", audio: "../assets/audio/song4.mp3" },
  
 ];
 
