@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - MTR Studios</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Dancing+Script:wght@700&family=Noto+Sans+Devanagari:wght@400;600;700;800&family=Noto+Serif+Devanagari:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../assets/css/global.css">
+
+    <!-- Page Specific CSS -->
+    <link rel="stylesheet" href="coming-soon.css">
+</head>
+
+<body class="coming-soon-page">
+
+    <!-- Dynamic Layout Placeholders -->
+    <div id="top-bar-placeholder"></div>
+    <div id="header-placeholder"></div>
+
+    <main class="cs-main">
+        <div class="cs-glow-bg"></div>
+        
+        <div class="cs-container">
+            <!-- Badge -->
+            <div class="cs-badge">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> कुछ खास बन रहा है
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="cs-title">
+                यह पेज बहुत जल्द <br>
+                <span class="cs-gold-text">लाइव होने वाला है!</span>
+            </h1>
+
+            <p class="cs-subtitle">
+                हम आपके अनुभव को और भी खास बनाने के लिए इस सेक्शन पर काम कर रहे हैं। <br>
+                MTR Studios की इस नई पेशकश का आनंद लेने के लिए थोड़ा इंतजार करें।
+            </p>
+
+            <!-- Animated Countdown Timer -->
+            <div class="cs-countdown">
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <label>दिन</label>
+                </div>
+                <div class="time-separator">:</div>
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <label>घंटे</label>
+                </div>
+                <div class="time-separator">:</div>
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <label>मिनट</label>
+                </div>
+                <div class="time-separator">:</div>
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <label>सेकंड</label>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="cs-actions">
+                <a href="../index.html" class="cs-btn cs-btn-primary">
+                    <i class="fa-solid fa-house"></i> मुख्य पृष्ठ पर जाएं
+                </a>
+                <a href="music.html" class="cs-btn cs-btn-secondary">
+                    <i class="fa-solid fa-music"></i> संगीत सुनें
+                </a>
+            </div>
+
+            <!-- Notification Box -->
+            <div class="cs-notify-box">
+                <p>अपडेट सबसे पहले पाने के लिए जुड़े रहें</p>
+                <form class="cs-form" onsubmit="event.preventDefault(); alert('धन्यवाद! अपडेट उपलब्ध होने पर आपको सूचित कर दिया जाएगा।');">
+                    <input type="email" placeholder="अपना ईमेल दर्ज करें..." required>
+                    <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Dynamic Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Application Loader JS -->
+    <script src="../assets/js/app-loader.js"></script>
+    <!-- Page Specific Logic -->
+    <script src="coming-soon.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,3116 @@
+/* ==========================================================================
+   MTR GLOBAL
+   हमारी कहानी — रक्षाबंधन विशेष संस्करण
+   पूर्ण हिन्दी Responsive Design
+   ========================================================================== */
+
+
+/* ==========================================================================
+   PAGE FOUNDATION
+   ========================================================================== */
+
+.story-page {
+
+    --bg-main: #080002;
+    --bg-deep: #110005;
+
+    --maroon: #56000f;
+
+    --gold: #ffd166;
+    --gold-bright: #ffe29a;
+
+    --pink: #ff4f9a;
+    --violet: #a78bfa;
+    --cyan: #55e6ff;
+
+    --white: #fffafc;
+
+    --muted: #c1b0bb;
+    --muted-light: #d9cbd3;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    color: var(--white);
+
+    background:
+
+        radial-gradient(
+            circle at 8% 8%,
+            rgba(139, 0, 21, .44),
+            transparent 34%
+        ),
+
+        radial-gradient(
+            circle at 92% 18%,
+            rgba(0, 240, 255, .11),
+            transparent 31%
+        ),
+
+        radial-gradient(
+            circle at 15% 60%,
+            rgba(255, 79, 154, .08),
+            transparent 34%
+        ),
+
+        radial-gradient(
+            circle at 88% 82%,
+            rgba(255, 209, 102, .08),
+            transparent 35%
+        ),
+
+        var(--bg-main);
+
+    font-family:
+        'Noto Sans Devanagari',
+        sans-serif;
+
+}
+
+
+/* ==========================================================================
+   GLOBAL BOX SIZING
+   ========================================================================== */
+
+.story-page *,
+.story-page *::before,
+.story-page *::after {
+
+    box-sizing: border-box;
+
+}
+
+
+/* ==========================================================================
+   HINDI TYPOGRAPHY
+   ========================================================================== */
+
+.story-page h1,
+.story-page h2,
+.story-page h3 {
+
+    font-family:
+        'Noto Serif Devanagari',
+        serif;
+
+    font-weight: 600;
+
+}
+
+
+/* ==========================================================================
+   ANIMATED MULTI COLOUR GRADIENT
+   ========================================================================== */
+
+.gradient-wave {
+
+    display: inline-block;
+
+    background:
+
+        linear-gradient(
+            90deg,
+
+            #ffffff 0%,
+
+            #ffd166 14%,
+
+            #ffb347 27%,
+
+            #ff4f9a 42%,
+
+            #a78bfa 57%,
+
+            #55e6ff 72%,
+
+            #ffffff 86%,
+
+            #ffd166 100%
+        );
+
+    background-size: 320% 100%;
+
+    background-position: 0% 50%;
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    color: transparent;
+
+    animation:
+        gradientWave
+        7s
+        linear
+        infinite;
+
+}
+
+
+@keyframes gradientWave {
+
+    0% {
+
+        background-position:
+            0% 50%;
+
+    }
+
+    50% {
+
+        background-position:
+            160% 50%;
+
+    }
+
+    100% {
+
+        background-position:
+            320% 50%;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+
+.story-hero {
+
+    min-height: 92vh;
+
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding:
+        8rem
+        5vw
+        5rem;
+
+    isolation: isolate;
+
+}
+
+
+/* ==========================================================================
+   HERO LIGHTS
+   ========================================================================== */
+
+.hero-light {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    filter: blur(5px);
+
+}
+
+
+.hero-light-one {
+
+    width: 420px;
+
+    height: 420px;
+
+    left: -190px;
+
+    top: 5%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(255, 0, 102, .14),
+            transparent 70%
+        );
+
+    animation:
+        heroLightOne
+        10s
+        ease-in-out
+        infinite
+        alternate;
+
+}
+
+
+.hero-light-two {
+
+    width: 500px;
+
+    height: 500px;
+
+    right: -250px;
+
+    top: 20%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(0, 240, 255, .10),
+            transparent 70%
+        );
+
+    animation:
+        heroLightTwo
+        13s
+        ease-in-out
+        infinite
+        alternate;
+
+}
+
+
+.hero-light-three {
+
+    width: 380px;
+
+    height: 380px;
+
+    left: 40%;
+
+    bottom: -220px;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(255, 209, 102, .08),
+            transparent 70%
+        );
+
+}
+
+
+@keyframes heroLightOne {
+
+    from {
+
+        transform:
+            translate(0, 0)
+            scale(1);
+
+    }
+
+    to {
+
+        transform:
+            translate(80px, 50px)
+            scale(1.15);
+
+    }
+
+}
+
+
+@keyframes heroLightTwo {
+
+    from {
+
+        transform:
+            translate(0, 0)
+            scale(1);
+
+    }
+
+    to {
+
+        transform:
+            translate(-70px, -35px)
+            scale(1.12);
+
+    }
+
+}
+
+
+/* ==========================================================================
+   HERO CONTENT
+   ========================================================================== */
+
+.hero-content {
+
+    width: min(1050px, 100%);
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* ==========================================================================
+   HERO TOP LINE
+   ========================================================================== */
+
+.hero-small-line {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 1.4rem;
+
+    color: #aa9aa8;
+
+    font-size: .72rem;
+
+    font-weight: 700;
+
+    letter-spacing: .12em;
+
+}
+
+
+.hero-small-line span {
+
+    width: 42px;
+
+    height: 1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold)
+        );
+
+}
+
+
+.hero-small-line span:last-child {
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--gold),
+            transparent
+        );
+
+}
+
+
+.hero-small-line i {
+
+    color: var(--pink);
+
+}
+
+
+/* ==========================================================================
+   FESTIVAL LABEL
+   ========================================================================== */
+
+.festival-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding:
+        .45rem
+        1.15rem;
+
+    margin-bottom: 1.5rem;
+
+    border:
+        1px solid
+        rgba(255, 209, 102, .30);
+
+    border-radius: 999px;
+
+    background:
+        rgba(255, 209, 102, .045);
+
+    color: var(--gold);
+
+    font-family:
+        'Noto Serif Devanagari',
+        serif;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+}
+
+
+/* ==========================================================================
+   HERO HEADING
+   ========================================================================== */
+
+.hero-title {
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    font-size:
+        clamp(
+            3.2rem,
+            7vw,
+            7.4rem
+        );
+
+    line-height: 1.18;
+
+    letter-spacing: -.025em;
+
+    font-weight: 700;
+
+}
+
+
+.hero-title .gradient-wave {
+
+    display: block;
+
+    margin-top: .1em;
+
+}
+
+
+/* ==========================================================================
+   HERO DESCRIPTION
+   ========================================================================== */
+
+.hero-description {
+
+    max-width: 760px;
+
+    margin:
+        2rem
+        auto
+        0;
+
+    color: var(--muted);
+
+    font-family:
+        'Noto Sans Devanagari',
+        sans-serif;
+
+    font-size:
+        clamp(
+            .9rem,
+            1.25vw,
+            1.05rem
+        );
+
+    line-height: 2;
+
+}
+
+
+/* ==========================================================================
+   HERO SIGNATURE
+   ========================================================================== */
+
+.hero-signature {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 3rem;
+
+    color: #877683;
+
+    font-size: .68rem;
+
+    font-weight: 700;
+
+    letter-spacing: .12em;
+
+}
+
+
+.hero-signature i {
+
+    color: var(--gold);
+
+    animation:
+        arrowFloat
+        1.8s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes arrowFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(7px);
+
+    }
+
+}
+
+
+/* ==========================================================================
+   STORY INTRODUCTION
+   ========================================================================== */
+
+.story-introduction {
+
+    padding:
+        7rem
+        5vw;
+
+}
+
+
+.story-intro-inner {
+
+    width: min(1100px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        150px
+        1fr;
+
+    gap: 4rem;
+
+}
+
+
+.story-intro-label {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    color: #8d7c88;
+
+    font-size: .68rem;
+
+    font-weight: 700;
+
+    letter-spacing: .08em;
+
+}
+
+
+.story-intro-label .number {
+
+    color: var(--gold);
+
+}
+
+
+.story-intro-content h2 {
+
+    max-width: 900px;
+
+    margin: 0;
+
+    font-size:
+        clamp(
+            2.8rem,
+            5vw,
+            5rem
+        );
+
+    line-height: 1.25;
+
+}
+
+
+.story-intro-content h2 .gradient-wave {
+
+    display: block;
+
+}
+
+
+.story-intro-content > p {
+
+    max-width: 780px;
+
+    margin:
+        1.7rem
+        0
+        0;
+
+    color: var(--muted);
+
+    font-size: .95rem;
+
+    line-height: 2;
+
+}
+
+
+/* ==========================================================================
+   QUOTE
+   ========================================================================== */
+
+.story-quote {
+
+    max-width: 780px;
+
+    margin-top: 2.5rem;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 1rem;
+
+    padding:
+        1.5rem
+        1.6rem;
+
+    border-left:
+        2px solid
+        var(--gold);
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(255,209,102,.055),
+            transparent
+        );
+
+}
+
+
+.quote-symbol {
+
+    color: var(--pink);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 4rem;
+
+    line-height: .5;
+
+}
+
+
+.story-quote p {
+
+    margin: 0;
+
+    color: #f0e6ec;
+
+    font-family:
+        'Noto Serif Devanagari',
+        serif;
+
+    font-size: 1.15rem;
+
+    font-weight: 600;
+
+    line-height: 1.9;
+
+}
+
+
+.story-quote div span {
+
+    display: block;
+
+    margin-top: .5rem;
+
+    color: #81727d;
+
+    font-size: .65rem;
+
+    font-weight: 600;
+
+}
+
+
+/* ==========================================================================
+   CHAPTER
+   ========================================================================== */
+
+.story-chapter {
+
+    padding:
+        7rem
+        5vw;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            transparent,
+            rgba(76,0,15,.12),
+            transparent
+        );
+
+}
+
+
+.chapter-inner {
+
+    width: min(1100px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        150px
+        1fr;
+
+    gap: 4rem;
+
+}
+
+
+.chapter-number {
+
+    font-family:
+        'Noto Serif Devanagari',
+        serif;
+
+    color:
+        rgba(255,209,102,.28);
+
+    font-size: 4.5rem;
+
+    font-weight: 700;
+
+}
+
+
+.chapter-content {
+
+    max-width: 850px;
+
+}
+
+
+.chapter-label {
+
+    color: var(--pink);
+
+    font-size: .68rem;
+
+    font-weight: 800;
+
+    letter-spacing: .08em;
+
+}
+
+
+.chapter-content h2 {
+
+    margin-top: .7rem;
+
+    font-size:
+        clamp(
+            2.8rem,
+            5vw,
+            5rem
+        );
+
+    line-height: 1.25;
+
+}
+
+
+.chapter-content h2 .gradient-wave {
+
+    display: inline-block;
+
+}
+
+
+.chapter-content > p {
+
+    max-width: 780px;
+
+    margin:
+        1.5rem
+        0
+        0;
+
+    color: var(--muted);
+
+    font-size: .95rem;
+
+    line-height: 2;
+
+}
+
+
+/* ==========================================================================
+   CHAPTER POINTS
+   ========================================================================== */
+
+.chapter-points {
+
+    max-width: 820px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 1rem;
+
+    margin-top: 2.5rem;
+
+}
+
+
+.chapter-point {
+
+    padding: 1.3rem;
+
+    border:
+        1px solid
+        rgba(255,255,255,.07);
+
+    border-radius: 16px;
+
+    background:
+        rgba(255,255,255,.018);
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease;
+
+}
+
+
+.chapter-point:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(85,230,255,.3);
+
+}
+
+
+.chapter-point > span {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin-bottom: .9rem;
+
+    border-radius: 50%;
+
+    color: var(--gold);
+
+    background:
+        rgba(255,209,102,.07);
+
+}
+
+
+.chapter-point strong {
+
+    display: block;
+
+    color: #f4e9ee;
+
+    font-size: .85rem;
+
+}
+
+
+.chapter-point p {
+
+    margin: .5rem 0 0;
+
+    color: #8f7f89;
+
+    font-size: .73rem;
+
+    line-height: 1.7;
+
+}
+
+
+/* ==========================================================================
+   MEMORY SECTION
+   ========================================================================== */
+
+.story-memory {
+
+    position: relative;
+
+    padding:
+        8rem
+        5vw;
+
+    overflow: hidden;
+
+}
+
+
+.memory-glow {
+
+    position: absolute;
+
+    width: 600px;
+
+    height: 600px;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(255,79,154,.08),
+            rgba(85,230,255,.035),
+            transparent 70%
+        );
+
+    pointer-events: none;
+
+}
+
+
+.memory-inner {
+
+    width: min(950px, 100%);
+
+    margin: auto;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.memory-heading {
+
+    text-align: center;
+
+}
+
+
+.memory-heading > span {
+
+    color: #857580;
+
+    font-size: .65rem;
+
+    font-weight: 700;
+
+    letter-spacing: .1em;
+
+}
+
+
+.memory-heading h2 {
+
+    margin-top: .8rem;
+
+    font-size:
+        clamp(
+            2.8rem,
+            5vw,
+            5.2rem
+        );
+
+    line-height: 1.25;
+
+}
+
+
+.memory-heading h2 .gradient-wave {
+
+    display: inline-block;
+
+}
+
+
+.memory-heading p {
+
+    max-width: 720px;
+
+    margin:
+        1.5rem
+        auto
+        0;
+
+    color: var(--muted);
+
+    font-size: .95rem;
+
+    line-height: 2;
+
+}
+
+
+/* ==========================================================================
+   MEMORY LINES
+   ========================================================================== */
+
+.memory-lines {
+
+    max-width: 800px;
+
+    margin:
+        4rem
+        auto
+        0;
+
+}
+
+
+.memory-line {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1.2rem;
+
+    padding:
+        1.4rem
+        0;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.06);
+
+}
+
+
+.memory-icon {
+
+    width: 44px;
+
+    height: 44px;
+
+    flex: 0 0 auto;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    color: var(--gold);
+
+    border:
+        1px solid
+        rgba(255,209,102,.2);
+
+    background:
+        rgba(255,209,102,.04);
+
+}
+
+
+.memory-line p {
+
+    margin: 0;
+
+    color: #d3c5ce;
+
+    font-family:
+        'Noto Serif Devanagari',
+        serif;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    line-height: 1.8;
+
+}
+
+
+/* ==========================================================================
+   FOUNDER HEADING
+   ========================================================================== */
+
+.founder-section {
+
+    padding:
+        7rem
+        5vw
+        9rem;
+
+}
+
+
+.founder-heading {
+
+    width: min(850px, 100%);
+
+    margin:
+        0
+        auto
+        4rem;
+
+    text-align: center;
+
+}
+
+
+.founder-heading-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--gold);
+
+    font-size: .67rem;
+
+    font-weight: 800;
+
+    letter-spacing: .08em;
+
+}
+
+
+.founder-heading-label i {
+
+    color: var(--pink);
+
+}
+
+
+.founder-heading h2 {
+
+    margin-top: .8rem;
+
+    font-size:
+        clamp(
+            2.8rem,
+            5vw,
+            5.2rem
+        );
+
+    line-height: 1.25;
+
+}
+
+
+.founder-heading h2 .gradient-wave {
+
+    display: inline-block;
+
+}
+
+
+.founder-heading p {
+
+    max-width: 650px;
+
+    margin:
+        1.2rem
+        auto
+        0;
+
+    color: var(--muted);
+
+    font-size: .9rem;
+
+    line-height: 1.9;
+
+}
+
+
+/* ==========================================================================
+   FOUNDER PANEL
+   ========================================================================== */
+
+.founder-panel {
+
+    width: min(1100px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        .85fr
+        1.15fr;
+
+    align-items: center;
+
+    gap: 5rem;
+
+    padding:
+        3.8rem;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(255,209,102,.22);
+
+    border-radius: 28px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(67,0,12,.94),
+            rgba(15,0,5,.98)
+        );
+
+    box-shadow:
+
+        0 30px 80px
+        rgba(0,0,0,.48);
+
+}
+
+
+/* ==========================================================================
+   PANEL LIGHT
+   ========================================================================== */
+
+.founder-panel::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+
+    height: 400px;
+
+    right: -220px;
+
+    top: -220px;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(85,230,255,.09),
+            transparent 70%
+        );
+
+    pointer-events: none;
+
+}
+
+
+/* ==========================================================================
+   FOUNDER PHOTO AREA
+   ========================================================================== */
+
+.founder-photo-area {
+
+    min-height: 350px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* ==========================================================================
+   STATIC PHOTO
+   ========================================================================== */
+
+.founder-photo {
+
+    width: 230px;
+
+    height: 230px;
+
+    position: relative;
+
+    z-index: 5;
+
+    border-radius: 50%;
+
+    padding: 4px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #ffd166,
+            #ff8c42,
+            #ff4f9a
+        );
+
+    box-shadow:
+
+        0 0 35px
+        rgba(255,209,102,.12);
+
+}
+
+
+.founder-photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    object-position: top center;
+
+    border:
+        4px solid
+        #150005;
+
+}
+
+
+/* ==========================================================================
+   DOTTED RING
+   PHOTO से EXACTLY 5px बाहर
+   केवल यह element rotate होगा
+   ========================================================================== */
+
+.founder-dotted-ring {
+
+    position: absolute;
+
+    width: 240px;
+
+    height: 240px;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    border:
+        2px dotted
+        var(--cyan);
+
+    z-index: 3;
+
+    pointer-events: none;
+
+    animation:
+        founderRing360
+        10s
+        linear
+        infinite;
+
+}
+
+
+@keyframes founderRing360 {
+
+    from {
+
+        transform:
+            translate(-50%, -50%)
+            rotate(0deg);
+
+    }
+
+    to {
+
+        transform:
+            translate(-50%, -50%)
+            rotate(360deg);
+
+    }
+
+}
+
+
+/* ==========================================================================
+   STATIC PHOTO GLOW
+   ========================================================================== */
+
+.founder-photo-glow {
+
+    position: absolute;
+
+    width: 280px;
+
+    height: 280px;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(255,79,154,.12),
+            transparent 68%
+        );
+
+    filter: blur(8px);
+
+    z-index: 1;
+
+    pointer-events: none;
+
+}
+
+
+/* ==========================================================================
+   FOUNDER ROLE
+   ========================================================================== */
+
+.founder-role {
+
+    position: absolute;
+
+    bottom: 15px;
+
+    z-index: 8;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding:
+        .45rem
+        .9rem;
+
+    border:
+        1px solid
+        rgba(255,209,102,.25);
+
+    border-radius: 999px;
+
+    background:
+        rgba(12,0,4,.94);
+
+    color: var(--gold);
+
+    font-size: .62rem;
+
+    font-weight: 800;
+
+    letter-spacing: .05em;
+
+}
+
+
+.founder-role i {
+
+    color: var(--pink);
+
+}
+
+
+/* ==========================================================================
+   FOUNDER CONTENT
+   ========================================================================== */
+
+.founder-content {
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+
+.founder-script {
+
+    color: var(--cyan);
+
+    font-family:
+        'Noto Serif Devanagari',
+        serif;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+}
+
+
+.founder-name {
+
+    margin-top: .5rem;
+
+    font-size:
+        clamp(
+            2.8rem,
+            5vw,
+            5rem
+        );
+
+    line-height: 1.15;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #ffd166,
+            #ff4f9a,
+            #a78bfa,
+            #55e6ff,
+            #ffffff
+        );
+
+    background-size: 320% 100%;
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    color: transparent;
+
+    animation:
+        gradientWave
+        7s
+        linear
+        infinite;
+
+}
+
+
+/* ==========================================================================
+   FOUNDER DIVIDER
+   ========================================================================== */
+
+.founder-divider {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin:
+        1.5rem
+        0;
+
+}
+
+
+.founder-divider span {
+
+    width: 50px;
+
+    height: 1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--gold),
+            transparent
+        );
+
+}
+
+
+.founder-divider span:last-child {
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--pink)
+        );
+
+}
+
+
+.founder-divider i {
+
+    color: var(--pink);
+
+}
+
+
+/* ==========================================================================
+   CEO QUOTE
+   ========================================================================== */
+
+.founder-content blockquote {
+
+    margin: 0;
+
+    color: #f3e8ed;
+
+    font-family:
+        'Noto Serif Devanagari',
+        serif;
+
+    font-size:
+        clamp(
+            1rem,
+            1.6vw,
+            1.25rem
+        );
+
+    font-weight: 600;
+
+    line-height: 2;
+
+}
+
+
+/* ==========================================================================
+   CEO DESCRIPTION
+   ========================================================================== */
+
+.founder-content > p {
+
+    max-width: 680px;
+
+    margin:
+        1.25rem
+        0
+        0;
+
+    color: var(--muted);
+
+    font-size: .88rem;
+
+    line-height: 2;
+
+}
+
+
+/* ==========================================================================
+   SIGNATURE
+   ========================================================================== */
+
+.founder-signature {
+
+    margin-top: 2rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+}
+
+
+.founder-signature span {
+
+    color: #806f7a;
+
+    font-size: .62rem;
+
+    font-weight: 600;
+
+}
+
+
+.founder-signature strong {
+
+    color: var(--gold);
+
+    font-family:
+        'Noto Serif Devanagari',
+        serif;
+
+    font-size: 1.6rem;
+
+    font-weight: 600;
+
+}
+
+
+/* ==========================================================================
+   FINAL SECTION
+   ========================================================================== */
+
+.story-ending {
+
+    min-height: 75vh;
+
+    padding:
+        7rem
+        5vw;
+
+    position: relative;
+
+    display: grid;
+
+    place-items: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+}
+
+
+.ending-glow {
+
+    position: absolute;
+
+    width: 600px;
+
+    height: 600px;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(255,79,154,.09),
+            rgba(255,209,102,.045),
+            transparent 70%
+        );
+
+    animation:
+        endingPulse
+        8s
+        ease-in-out
+        infinite
+        alternate;
+
+}
+
+
+@keyframes endingPulse {
+
+    from {
+
+        transform:
+            scale(.85);
+
+        opacity: .55;
+
+    }
+
+    to {
+
+        transform:
+            scale(1.15);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   ENDING CONTENT
+   ========================================================================== */
+
+.ending-content {
+
+    width: min(850px, 100%);
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.ending-label {
+
+    color: #857681;
+
+    font-size: .66rem;
+
+    font-weight: 800;
+
+    letter-spacing: .1em;
+
+}
+
+
+.ending-content h2 {
+
+    margin-top: 1rem;
+
+    font-size:
+        clamp(
+            2.8rem,
+            6vw,
+            6rem
+        );
+
+    line-height: 1.2;
+
+}
+
+
+.ending-content h2 .gradient-wave {
+
+    display: inline-block;
+
+}
+
+
+.ending-content > p {
+
+    max-width: 650px;
+
+    margin:
+        1.5rem
+        auto
+        0;
+
+    color: var(--muted);
+
+    font-size: .95rem;
+
+    line-height: 2;
+
+}
+
+
+/* ==========================================================================
+   ENDING THREAD
+   ========================================================================== */
+
+.ending-thread {
+
+    width: min(380px, 80%);
+
+    margin:
+        3rem
+        auto
+        2rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+}
+
+
+.ending-thread > span {
+
+    width: 8px;
+
+    height: 8px;
+
+    flex: 0 0 auto;
+
+    border-radius: 50%;
+
+    background: var(--gold);
+
+    box-shadow:
+        0 0 15px
+        rgba(255,209,102,.7);
+
+}
+
+
+.ending-thread div {
+
+    height: 1px;
+
+    flex: 1;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--gold),
+            var(--pink),
+            var(--violet),
+            var(--cyan)
+        );
+
+    background-size: 300% 100%;
+
+    animation:
+        threadWave
+        5s
+        linear
+        infinite;
+
+}
+
+
+@keyframes threadWave {
+
+    from {
+
+        background-position:
+            0% 50%;
+
+    }
+
+    to {
+
+        background-position:
+            300% 50%;
+
+    }
+
+}
+
+
+.ending-thread i {
+
+    color: var(--pink);
+
+    font-size: 1rem;
+
+}
+
+
+/* ==========================================================================
+   RAKHI WISH
+   ========================================================================== */
+
+.rakhi-wish {
+
+    display: block;
+
+    color: var(--gold);
+
+    font-family:
+        'Noto Serif Devanagari',
+        serif;
+
+    font-size:
+        clamp(
+            1.5rem,
+            3vw,
+            2.2rem
+        );
+
+    font-weight: 700;
+
+}
+
+
+.rakhi-subwish {
+
+    display: block;
+
+    margin-top: .7rem;
+
+    color: #8f7e89;
+
+    font-size: .68rem;
+
+    font-weight: 600;
+
+}
+
+
+/* ==========================================================================
+   LARGE TABLET
+   ========================================================================== */
+
+@media (max-width: 1100px) {
+
+
+    .founder-panel {
+
+        gap: 3rem;
+
+        padding: 3rem;
+
+    }
+
+
+}
+
+
+/* ==========================================================================
+   TABLET
+   ========================================================================== */
+
+@media (max-width: 900px) {
+
+
+    .story-intro-inner,
+    .chapter-inner {
+
+        grid-template-columns: 1fr;
+
+        gap: 1.5rem;
+
+    }
+
+
+    .story-intro-label {
+
+        justify-content: center;
+
+    }
+
+
+    .chapter-number {
+
+        display: none;
+
+    }
+
+
+    .chapter-content {
+
+        margin: auto;
+
+        text-align: center;
+
+    }
+
+
+    .chapter-content > p {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+
+    .chapter-points {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+
+    .founder-panel {
+
+        grid-template-columns: 1fr;
+
+        gap: 3rem;
+
+        padding: 3rem 2rem;
+
+    }
+
+
+    .founder-content {
+
+        text-align: center;
+
+    }
+
+
+    .founder-divider {
+
+        justify-content: center;
+
+    }
+
+
+    .founder-content > p {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+
+    .founder-signature {
+
+        align-items: center;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
+
+@media (max-width: 650px) {
+
+
+    .story-hero {
+
+        min-height: 82vh;
+
+        padding:
+            7rem
+            1.1rem
+            4rem;
+
+    }
+
+
+    .hero-small-line {
+
+        gap: 8px;
+
+        font-size: .61rem;
+
+    }
+
+
+    .hero-small-line span {
+
+        width: 22px;
+
+    }
+
+
+    .festival-label {
+
+        font-size: .88rem;
+
+        padding:
+            .4rem
+            .9rem;
+
+    }
+
+
+    .hero-title {
+
+        font-size:
+            clamp(
+                2.7rem,
+                12vw,
+                4.5rem
+            );
+
+        line-height: 1.3;
+
+        letter-spacing: 0;
+
+    }
+
+
+    .hero-title .gradient-wave {
+
+        margin-top: .08em;
+
+    }
+
+
+    .hero-description {
+
+        font-size: .82rem;
+
+        line-height: 2;
+
+    }
+
+
+    .story-introduction,
+    .story-chapter,
+    .story-memory,
+    .founder-section,
+    .story-ending {
+
+        padding-left: 1.1rem;
+
+        padding-right: 1.1rem;
+
+    }
+
+
+    .story-intro-content h2,
+    .chapter-content h2,
+    .memory-heading h2 {
+
+        font-size:
+            clamp(
+                2.4rem,
+                11vw,
+                4rem
+            );
+
+        line-height: 1.35;
+
+    }
+
+
+    .story-intro-content > p,
+    .chapter-content > p,
+    .memory-heading p {
+
+        font-size: .84rem;
+
+        line-height: 2;
+
+    }
+
+
+    .chapter-points {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .memory-line {
+
+        align-items: flex-start;
+
+    }
+
+
+    .memory-line p {
+
+        font-size: .9rem;
+
+        line-height: 1.8;
+
+    }
+
+
+    /* =========================================================
+       FOUNDER MOBILE
+    ========================================================== */
+
+    .founder-panel {
+
+        padding:
+            2.2rem
+            1.1rem;
+
+        border-radius: 22px;
+
+    }
+
+
+    .founder-photo-area {
+
+        min-height: 310px;
+
+    }
+
+
+    .founder-photo {
+
+        width: 200px;
+
+        height: 200px;
+
+    }
+
+
+    /*
+       PHOTO = 200px
+       RING = 210px
+       5px GAP EACH SIDE
+    */
+
+    .founder-dotted-ring {
+
+        width: 210px;
+
+        height: 210px;
+
+    }
+
+
+    .founder-photo-glow {
+
+        width: 250px;
+
+        height: 250px;
+
+    }
+
+
+    .founder-name {
+
+        font-size:
+            clamp(
+                2.5rem,
+                11vw,
+                4rem
+            );
+
+        line-height: 1.25;
+
+    }
+
+
+    .founder-content blockquote {
+
+        font-size: .92rem;
+
+        line-height: 2;
+
+    }
+
+
+    .founder-content > p {
+
+        font-size: .8rem;
+
+        line-height: 2;
+
+    }
+
+
+    .ending-content h2 {
+
+        font-size:
+            clamp(
+                2.5rem,
+                11vw,
+                4.2rem
+            );
+
+        line-height: 1.35;
+
+    }
+
+
+    .ending-content > p {
+
+        font-size: .84rem;
+
+        line-height: 2;
+
+    }
+
+
+}
+
+
+/* ==========================================================================
+   SMALL MOBILE
+   ========================================================================== */
+
+@media (max-width: 400px) {
+
+
+    .story-hero {
+
+        padding-top: 6rem;
+
+    }
+
+
+    .hero-title {
+
+        font-size: 2.55rem;
+
+        line-height: 1.35;
+
+    }
+
+
+    .festival-label {
+
+        font-size: .8rem;
+
+    }
+
+
+    .hero-description {
+
+        font-size: .78rem;
+
+    }
+
+
+    .founder-photo {
+
+        width: 180px;
+
+        height: 180px;
+
+    }
+
+
+    /*
+       PHOTO = 180px
+       RING = 190px
+       5px GAP EACH SIDE
+    */
+
+    .founder-dotted-ring {
+
+        width: 190px;
+
+        height: 190px;
+
+    }
+
+
+    .founder-photo-area {
+
+        min-height: 285px;
+
+    }
+
+
+    .founder-heading h2 {
+
+        font-size: 2.5rem;
+
+    }
+
+
+    .rakhi-subwish {
+
+        font-size: .6rem;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   VERY SMALL DEVICES
+   ========================================================================== */
+
+@media (max-width: 340px) {
+
+
+    .hero-title {
+
+        font-size: 2.3rem;
+
+    }
+
+
+    .story-intro-content h2,
+    .chapter-content h2,
+    .memory-heading h2 {
+
+        font-size: 2.2rem;
+
+    }
+
+
+    .founder-photo {
+
+        width: 165px;
+
+        height: 165px;
+
+    }
+
+
+    .founder-dotted-ring {
+
+        width: 175px;
+
+        height: 175px;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================
+   HINDI HEADING FIX
+   Prevent Devanagari glyphs from getting clipped
+   ========================================================== */
+
+.story-page h1,
+.story-page h2,
+.story-page h3 {
+
+    font-family: 'Noto Serif Devanagari', serif;
+
+    font-weight: 600;
+
+    line-height: 1.5 !important;
+
+    letter-spacing: 0 !important;
+
+    overflow: visible !important;
+
+    padding-top: .12em;
+
+    padding-bottom: .18em;
+
+}
+
+
+/* HERO HEADING */
+
+.hero-title {
+
+    font-family: 'Noto Serif Devanagari', serif;
+
+    font-weight: 700;
+
+    line-height: 1.45 !important;
+
+    letter-spacing: 0 !important;
+
+    overflow: visible !important;
+
+    padding:
+        .15em
+        .05em
+        .22em;
+
+}
+
+
+/* Gradient text */
+
+.gradient-wave {
+
+    display: inline-block;
+
+    font-family: 'Noto Serif Devanagari', serif;
+
+    line-height: 1.45 !important;
+
+    padding:
+        .08em
+        .08em
+        .15em;
+
+    overflow: visible !important;
+
+}
+
+
+/* ==========================================================
+   ALL OTHER STORY HEADINGS
+   ========================================================== */
+
+.story-intro-content h2,
+.chapter-content h2,
+.memory-heading h2,
+.founder-heading h2,
+.founder-name,
+.ending-content h2 {
+
+    line-height: 1.45 !important;
+
+    overflow: visible !important;
+
+    padding:
+        .12em
+        .05em
+        .20em;
+
+}
+
+
+/* Gradient inside other headings */
+
+.story-intro-content h2 .gradient-wave,
+.chapter-content h2 .gradient-wave,
+.memory-heading h2 .gradient-wave,
+.founder-heading h2 .gradient-wave,
+.ending-content h2 .gradient-wave {
+
+    line-height: 1.45 !important;
+
+    padding:
+        .08em
+        .08em
+        .15em;
+
+}
+
+
+/* ==========================================================
+   DESKTOP
+   ========================================================== */
+
+@media (min-width: 901px) {
+
+    .hero-title {
+
+        font-size:
+            clamp(
+                3.2rem,
+                7vw,
+                7.4rem
+            );
+
+        line-height: 1.45 !important;
+
+    }
+
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 900px) {
+
+    .hero-title {
+
+        line-height: 1.45 !important;
+
+    }
+
+    .story-intro-content h2,
+    .chapter-content h2,
+    .memory-heading h2,
+    .founder-heading h2,
+    .ending-content h2 {
+
+        line-height: 1.45 !important;
+
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 650px) {
+
+    .hero-title {
+
+        font-size:
+            clamp(
+                2.5rem,
+                11vw,
+                4.5rem
+            );
+
+        line-height: 1.5 !important;
+
+        padding:
+            .12em
+            .05em
+            .25em;
+
+    }
+
+
+    .gradient-wave {
+
+        line-height: 1.5 !important;
+
+        padding:
+            .08em
+            .08em
+            .18em;
+
+    }
+
+
+    .story-intro-content h2,
+    .chapter-content h2,
+    .memory-heading h2,
+    .founder-heading h2,
+    .ending-content h2 {
+
+        line-height: 1.5 !important;
+
+        padding:
+            .12em
+            .04em
+            .22em;
+
+    }
+
+}
+
+
+/* ==========================================================
+   VERY SMALL MOBILE
+   ========================================================== */
+
+@media (max-width: 400px) {
+
+    .hero-title {
+
+        line-height: 1.55 !important;
+
+    }
+
+
+    .gradient-wave {
+
+        line-height: 1.55 !important;
+
+    }
+
+}
+
+
+/* ==========================================================
+   FINAL UNIFIED SECTION NUMBERING
+   हर section में एक जैसा: location • size • spacing
+   ========================================================== */
+
+.story-page .section-kicker {
+
+    width: 100%;
+
+    min-height: 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin: 0 auto 1.5rem;
+
+    padding: 0;
+
+    text-align: center;
+
+    white-space: nowrap;
+
+}
+
+
+.story-page .section-number {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    color: #ffd166;
+
+    font-family: 'Noto Sans Devanagari', sans-serif;
+
+    font-size: .72rem;
+
+    font-weight: 800;
+
+    line-height: 1.6;
+
+    letter-spacing: 0;
+
+}
+
+
+.story-page .section-dot {
+
+    flex: 0 0 auto;
+
+    color: #ff4f9a;
+
+    font-family: 'Noto Sans Devanagari', sans-serif;
+
+    font-size: .78rem;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+}
+
+
+.story-page .section-title {
+
+    flex: 0 0 auto;
+
+    color: #a99aa5;
+
+    font-family: 'Noto Sans Devanagari', sans-serif;
+
+    font-size: .68rem;
+
+    font-weight: 700;
+
+    line-height: 1.7;
+
+    letter-spacing: 0;
+
+}
+
+
+.story-page .section-line {
+
+    display: block;
+
+    width: 34px;
+
+    height: 1px;
+
+    flex: 0 0 34px;
+
+    padding: 0;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 209, 102, .78)
+    );
+
+}
+
+
+.story-page .section-line:last-child {
+
+    background: linear-gradient(
+        90deg,
+        rgba(255, 209, 102, .78),
+        transparent
+    );
+
+}
+
+
+/* पुराने अलग-अलग numbering layouts बंद */
+
+.story-page .story-intro-label,
+.story-page .chapter-inner > .number,
+.story-page .memory-heading > span,
+.story-page .founder-heading-label,
+.story-page .ending-label {
+
+    display: none !important;
+
+}
+
+
+/* Introduction और Chapter में पुराना left-number column हटाकर
+   content को एक ही centered flow में रखा गया है */
+
+.story-page .story-intro-inner,
+.story-page .chapter-inner {
+
+    display: block;
+
+    width: min(1100px, 100%);
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+}
+
+
+.story-page .story-intro-content .section-kicker,
+.story-page .chapter-content .section-kicker,
+.story-page .memory-heading .section-kicker,
+.story-page .founder-heading .section-kicker,
+.story-page .ending-content .section-kicker {
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+}
+
+
+/* Chapter के पुराने label की जगह अब universal kicker है */
+
+.story-page .chapter-label {
+
+    display: none !important;
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .story-page .section-kicker {
+
+        gap: 7px;
+
+        min-height: 22px;
+
+        margin-bottom: 1.2rem;
+
+    }
+
+    .story-page .section-number {
+
+        font-size: .65rem;
+
+    }
+
+    .story-page .section-dot {
+
+        font-size: .7rem;
+
+    }
+
+    .story-page .section-title {
+
+        font-size: .62rem;
+
+    }
+
+    .story-page .section-line {
+
+        width: 22px;
+
+        flex-basis: 22px;
+
+    }
+
+}
+
+
+/* Very small mobile */
+
+@media (max-width: 400px) {
+
+    .story-page .section-kicker {
+
+        gap: 6px;
+
+    }
+
+    .story-page .section-line {
+
+        width: 18px;
+
+        flex-basis: 18px;
+
+    }
+
+    .story-page .section-number {
+
+        font-size: .61rem;
+
+    }
+
+    .story-page .section-title {
+
+        font-size: .58rem;
+
+    }
+
+}

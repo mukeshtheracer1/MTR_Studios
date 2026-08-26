@@ -1,0 +1,4019 @@
+/* ============================================================
+   MTR STUDIOS
+   RAKSHA BANDHAN MUHURAT 2026
+   COMPLETE PAGE CSS
+   ============================================================ */
+
+:root {
+    --primary: #8b1e3f;
+    --primary-dark: #64142d;
+    --primary-soft: #fff1f5;
+
+    --gold: #c58b22;
+    --gold-light: #fff7df;
+
+    --green: #177245;
+    --green-dark: #0f5532;
+    --green-soft: #eefaf3;
+
+    --red: #c62828;
+    --red-dark: #8e1717;
+    --red-soft: #fff1f1;
+
+    --orange: #e87516;
+    --orange-soft: #fff5e9;
+
+    --blue: #2866a8;
+    --blue-soft: #eef6ff;
+
+    --purple: #6840a5;
+    --purple-soft: #f5efff;
+
+    --text: #242424;
+    --text-soft: #666;
+    --muted: #8a8a8a;
+
+    --white: #ffffff;
+
+    --border: #eadfd8;
+    --border-light: #f0e9e5;
+
+    --page-bg: #fffaf7;
+
+    --shadow-sm:
+        0 4px 15px rgba(50, 25, 15, 0.07);
+
+    --shadow:
+        0 10px 30px rgba(50, 25, 15, 0.10);
+
+    --shadow-lg:
+        0 18px 50px rgba(50, 25, 15, 0.14);
+
+    --radius-sm: 10px;
+    --radius: 16px;
+    --radius-lg: 24px;
+
+    --transition:
+        0.25s ease;
+}
+
+
+/* ============================================================
+   RESET
+   ============================================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fffaf7 0%,
+            #fff 45%,
+            #fffaf7 100%
+        );
+
+    color: var(--text);
+
+    font-family:
+        "Noto Sans Devanagari",
+        "Noto Sans",
+        Arial,
+        sans-serif;
+
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ============================================================
+   MAIN
+   ============================================================ */
+
+#muhuratPage {
+    width: 100%;
+    overflow: hidden;
+}
+
+#muhuratPage > section,
+#muhuratPage > div {
+    width: min(1180px, calc(100% - 32px));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.muhurat-hero {
+    margin-top: 25px;
+    margin-bottom: 28px;
+
+    padding: 42px;
+
+    min-height: 330px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.5fr)
+        minmax(300px, .8fr);
+
+    gap: 35px;
+
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 30px;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(255,255,255,.16),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 15% 90%,
+            rgba(255,255,255,.10),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #7d1839,
+            #a42b50 55%,
+            #7b1839
+        );
+
+    color: #fff;
+
+    box-shadow: var(--shadow-lg);
+}
+
+.muhurat-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    right: -80px;
+    bottom: -110px;
+
+    border: 1px solid rgba(255,255,255,.15);
+
+    border-radius: 50%;
+}
+
+.muhurat-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 140px;
+    height: 140px;
+
+    right: 130px;
+    top: -80px;
+
+    border: 1px solid rgba(255,255,255,.12);
+
+    border-radius: 50%;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-kicker {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 7px 14px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,.14);
+
+    border:
+        1px solid rgba(255,255,255,.20);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: .2px;
+}
+
+.hero-content h1 {
+    margin: 17px 0 10px;
+
+    font-size:
+        clamp(34px, 5vw, 58px);
+
+    line-height: 1.1;
+
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+}
+
+.hero-content h1 span {
+    color: #ffd77a;
+}
+
+.hero-description {
+    max-width: 700px;
+
+    margin: 0;
+
+    color:
+        rgba(255,255,255,.86);
+
+    font-size: 16px;
+}
+
+.hero-location {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 18px;
+
+    font-weight: 700;
+}
+
+.hero-data-status {
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 15px;
+
+    padding: 7px 12px;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+
+    background:
+        rgba(255,255,255,.12);
+}
+
+.hero-data-status.is-success {
+    color: #eafff2;
+}
+
+.hero-data-status.is-error {
+    color: #ffe5e5;
+}
+
+.hero-data-status.is-loading {
+    color: #fff6d6;
+}
+
+
+/* ============================================================
+   HERO DATE CARD
+   ============================================================ */
+
+.hero-date-card {
+    position: relative;
+
+    z-index: 2;
+
+    padding: 24px;
+
+    border-radius: 22px;
+
+    background:
+        rgba(255,255,255,.96);
+
+    color: var(--text);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.13);
+}
+
+.hero-date-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    color: var(--primary);
+
+    background: var(--primary-soft);
+
+    font-size: 22px;
+}
+
+.hero-date-content {
+    margin-top: 15px;
+}
+
+.hero-date-content span {
+    display: block;
+
+    color: var(--text-soft);
+
+    font-size: 13px;
+}
+
+.hero-date-content strong {
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--primary);
+
+    font-size: 25px;
+
+    line-height: 1.25;
+}
+
+.hero-date-facts {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    margin-top: 18px;
+
+    padding-top: 16px;
+
+    border-top: 1px solid var(--border-light);
+}
+
+.hero-date-facts div {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-date-facts small {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.hero-date-facts strong {
+    margin-top: 2px;
+
+    color: var(--text);
+
+    font-size: 14px;
+}
+
+
+/* ============================================================
+   SECTION HEADING
+   ============================================================ */
+
+.section-heading {
+    margin-bottom: 22px;
+}
+
+.section-kicker {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--green);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: .3px;
+}
+
+.danger-kicker {
+    color: var(--red);
+}
+
+.section-heading h2 {
+    margin: 6px 0 0;
+
+    font-size:
+        clamp(25px, 3vw, 34px);
+
+    line-height: 1.25;
+
+    font-weight: 800;
+
+    letter-spacing: -.4px;
+}
+
+.section-heading h2 span {
+    color: var(--primary);
+}
+
+.section-heading p {
+    margin: 7px 0 0;
+
+    color: var(--text-soft);
+
+    font-size: 14px;
+}
+
+
+/* ============================================================
+   LOCATION SELECTOR
+   ============================================================ */
+
+.location-section {
+    margin-bottom: 32px;
+}
+
+.location-selector-card {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 17px 20px;
+
+    background: #fff;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.location-selector-icon {
+    width: 48px;
+    height: 48px;
+
+    flex: 0 0 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    color: var(--primary);
+
+    background: var(--primary-soft);
+
+    font-size: 20px;
+}
+
+.location-selector-content {
+    min-width: 0;
+
+    flex: 1;
+}
+
+.location-selector-content span {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+.location-selector-content strong {
+    display: block;
+
+    color: var(--text);
+
+    font-size: 15px;
+}
+
+.district-selector {
+    min-width: 250px;
+
+    padding: 11px 38px 11px 14px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 11px;
+
+    background: #fff;
+
+    color: var(--text);
+
+    outline: none;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.district-selector:focus {
+    border-color:
+        var(--primary);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(139,30,63,.10);
+}
+
+
+/* ============================================================
+   RAKHI MUHURAT
+   ============================================================ */
+
+.rakhi-muhurat-section,
+.rakhi-details-section,
+.panchang-section,
+.sunmoon-section,
+.choghadiya-section,
+.auspicious-section,
+.avoid-section,
+.detailed-panchang-section {
+    margin-top: 42px;
+    margin-bottom: 42px;
+}
+
+.rakhi-main-card {
+    display: grid;
+
+    grid-template-columns:
+        auto 1fr auto;
+
+    align-items: center;
+
+    gap: 22px;
+
+    padding: 25px;
+
+    border-radius: var(--radius-lg);
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8e9,
+            #fff
+        );
+
+    border:
+        1px solid #ecd9b4;
+
+    box-shadow: var(--shadow);
+}
+
+.rakhi-main-icon {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: var(--gold-light);
+
+    color: var(--gold);
+
+    font-size: 30px;
+}
+
+.rakhi-main-content > span {
+    color: var(--text-soft);
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.rakhi-time {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 8px;
+
+    margin-top: 3px;
+
+    flex-wrap: wrap;
+}
+
+.rakhi-time strong {
+    color: var(--primary);
+
+    font-size:
+        clamp(24px, 4vw, 36px);
+
+    line-height: 1.15;
+}
+
+.rakhi-time span {
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+.rakhi-duration {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 8px;
+
+    color: var(--text-soft);
+
+    font-size: 12px;
+}
+
+.rakhi-duration strong {
+    color: var(--text);
+}
+
+.rakhi-status {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 9px 13px;
+
+    border-radius: 30px;
+
+    background: var(--green-soft);
+
+    color: var(--green);
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+
+/* ============================================================
+   RAKHI DETAILS
+   ============================================================ */
+
+.rakhi-details-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 16px;
+}
+
+.detail-card {
+    min-height: 112px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 18px;
+
+    background: #fff;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+.detail-card:hover {
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        var(--shadow);
+}
+
+.detail-card-icon {
+    width: 46px;
+    height: 46px;
+
+    flex: 0 0 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: var(--primary-soft);
+
+    color: var(--primary);
+}
+
+.detail-card-content {
+    min-width: 0;
+}
+
+.detail-card-content span {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+.detail-card-content strong {
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+.bhadra-card .detail-card-icon {
+    color: var(--red);
+
+    background: var(--red-soft);
+}
+
+
+/* ============================================================
+   PANCHANG
+   ============================================================ */
+
+.panchang-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.panchang-card {
+    min-height: 165px;
+
+    padding: 19px;
+
+    background: #fff;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+.panchang-card:hover {
+    transform:
+        translateY(-3px);
+
+    box-shadow: var(--shadow);
+}
+
+.panchang-card-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    color: var(--purple);
+
+    background: var(--purple-soft);
+
+    margin-bottom: 13px;
+}
+
+.panchang-card > span {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.panchang-card > strong {
+    display: block;
+
+    margin-top: 4px;
+
+    color: var(--text);
+
+    font-size: 17px;
+
+    line-height: 1.35;
+}
+
+.panchang-card > small {
+    display: block;
+
+    margin-top: 2px;
+
+    color: var(--primary);
+
+    font-size: 12px;
+}
+
+.panchang-card > em {
+    display: block;
+
+    margin-top: 8px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    font-style: normal;
+}
+
+.panchang-location,
+.sunrise-location {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    margin-top: 16px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* ============================================================
+   SUN / MOON
+   ============================================================ */
+
+.sunmoon-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 16px;
+}
+
+.sunmoon-card {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 22px;
+
+    min-height: 145px;
+
+    background: #fff;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.sunmoon-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 90px;
+    height: 90px;
+
+    right: -35px;
+    bottom: -35px;
+
+    border-radius: 50%;
+
+    background: var(--gold-light);
+}
+
+.sunmoon-icon {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    color: var(--gold);
+
+    background: var(--gold-light);
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.sunmoon-card > span {
+    display: block;
+
+    margin-top: 14px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.sunmoon-card > strong {
+    display: block;
+
+    margin-top: 2px;
+
+    color: var(--text);
+
+    font-size: 22px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.sunmoon-card > small {
+    color: var(--muted);
+
+    font-size: 11px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* ============================================================
+   CHOGHADIYA
+   ============================================================ */
+
+.choghadiya-period {
+    margin-bottom: 25px;
+
+    padding: 22px;
+
+    border-radius: var(--radius-lg);
+
+    background: #fff;
+
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.choghadiya-period-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin-bottom: 18px;
+
+    padding-bottom: 15px;
+
+    border-bottom:
+        1px solid var(--border-light);
+}
+
+.choghadiya-period-heading > i {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    color: var(--gold);
+
+    background: var(--gold-light);
+}
+
+.choghadiya-period-heading h3 {
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 18px;
+}
+
+.choghadiya-period-heading span {
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+.choghadiya-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 10px;
+}
+
+.choghadiya-row {
+    min-height: 64px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 12px 15px;
+
+    border-radius: 12px;
+
+    background: #fafafa;
+
+    border: 1px solid var(--border-light);
+}
+
+.choghadiya-name {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    min-width: 0;
+}
+
+.choghadiya-name > i {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #f2f2f2;
+
+    color: var(--text-soft);
+
+    flex: 0 0 32px;
+}
+
+.choghadiya-name span {
+    font-weight: 800;
+
+    font-size: 14px;
+}
+
+.choghadiya-name small {
+    display: block;
+
+    margin-top: -2px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    font-weight: 500;
+}
+
+.choghadiya-row > strong {
+    text-align: right;
+
+    color: var(--text);
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+.choghadiya-row.best {
+    background: var(--green-soft);
+
+    border-color: #cfe8d9;
+}
+
+.choghadiya-row.best .choghadiya-name > i {
+    color: var(--green);
+
+    background: #dff3e7;
+}
+
+.choghadiya-row.good {
+    background: #f5fbf7;
+
+    border-color: #dcefe3;
+}
+
+.choghadiya-row.good .choghadiya-name > i {
+    color: var(--green);
+
+    background: #e6f5eb;
+}
+
+.choghadiya-row.bad {
+    background: var(--red-soft);
+
+    border-color: #f0d3d3;
+}
+
+.choghadiya-row.bad .choghadiya-name > i {
+    color: var(--red);
+
+    background: #ffe0e0;
+}
+
+.choghadiya-row.neutral {
+    background: #fafafa;
+}
+
+
+/* ============================================================
+   SHUBH SAMAY
+   ============================================================ */
+
+.auspicious-period {
+    margin-bottom: 25px;
+
+    padding: 22px;
+
+    border-radius: var(--radius-lg);
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f8fff9
+        );
+
+    border: 1px solid #d9ebdf;
+
+    box-shadow: var(--shadow-sm);
+}
+
+.auspicious-period-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin-bottom: 18px;
+
+    padding-bottom: 15px;
+
+    border-bottom:
+        1px solid #e4f0e7;
+}
+
+.auspicious-period-icon {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    color: var(--green);
+
+    background: var(--green-soft);
+}
+
+.auspicious-period-heading h3 {
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 19px;
+}
+
+.auspicious-period-heading span {
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+.auspicious-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.auspicious-card {
+    position: relative;
+
+    min-height: 155px;
+
+    padding: 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: #fff;
+
+    border: 1px solid #dcebe1;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 5px 16px
+        rgba(23,114,69,.06);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+.auspicious-card:hover {
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(23,114,69,.12);
+}
+
+.auspicious-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    right: -42px;
+    bottom: -42px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(23,114,69,.055);
+}
+
+.auspicious-card > i {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 11px;
+
+    border-radius: 11px;
+
+    color: var(--green);
+
+    background: var(--green-soft);
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.auspicious-card > span {
+    color: var(--text);
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.auspicious-card > small {
+    margin-top: 1px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.auspicious-card > strong {
+    display: block;
+
+    margin-top: 8px;
+
+    color: var(--green-dark);
+
+    font-size: 15px;
+
+    line-height: 1.4;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* ============================================================
+   ASHUBH SAMAY
+   ============================================================ */
+
+.avoid-section {
+    padding: 30px;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffafa,
+            #fff5f5
+        );
+
+    border:
+        1px solid #efd8d8;
+}
+
+.avoid-period {
+    margin-bottom: 25px;
+
+    padding: 22px;
+
+    border-radius: var(--radius-lg);
+
+    background: #fff;
+
+    border:
+        1px solid #f0dddd;
+
+    box-shadow:
+        0 7px 22px
+        rgba(198,40,40,.055);
+}
+
+.avoid-period:last-child {
+    margin-bottom: 0;
+}
+
+.avoid-period-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin-bottom: 18px;
+
+    padding-bottom: 15px;
+
+    border-bottom:
+        1px solid #f4e4e4;
+}
+
+.avoid-period-icon {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    color: var(--red);
+
+    background: var(--red-soft);
+}
+
+.avoid-period-heading h3 {
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 19px;
+}
+
+.avoid-period-heading span {
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+.avoid-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.avoid-card {
+    min-height: 155px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 22px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border:
+        1px solid #f0dada;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff,
+            #fff7f7
+        );
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+.avoid-card:hover {
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(198,40,40,.10);
+}
+
+.avoid-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    right: -42px;
+    bottom: -42px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(198,40,40,.055);
+}
+
+.avoid-card > div {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 11px;
+
+    border-radius: 11px;
+
+    color: var(--red);
+
+    background: #ffe7e7;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.avoid-card > span {
+    color: var(--text);
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.avoid-card > small {
+    margin-top: 1px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.avoid-card > strong {
+    display: block;
+
+    margin-top: 8px;
+
+    color: var(--red-dark);
+
+    font-size: 15px;
+
+    line-height: 1.4;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* ============================================================
+   NEXT DAY ASHUBH
+   ============================================================ */
+
+.next-day-ashubh {
+    margin-top: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 14px 16px;
+
+    border-radius: 13px;
+
+    border:
+        1px dashed #e3bcbc;
+
+    background:
+        #fff8f8;
+}
+
+.next-day-ashubh::before {
+    content: "";
+
+    width: 4px;
+
+    align-self: stretch;
+
+    border-radius: 10px;
+
+    background: var(--red);
+}
+
+.next-day-ashubh > span {
+    flex: 1;
+
+    color: var(--text-soft);
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.next-day-ashubh > strong {
+    color: var(--red-dark);
+
+    font-size: 13px;
+
+    text-align: right;
+}
+
+
+/* ============================================================
+   ADVANCED PANCHANG
+   ============================================================ */
+
+.advanced-panchang {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+.advanced-data-item {
+    min-height: 75px;
+
+    padding: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    border: 1px solid var(--border);
+
+    border-radius: 13px;
+
+    background: #fff;
+
+    box-shadow: var(--shadow-sm);
+}
+
+.advanced-data-item span {
+    color: var(--muted);
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.advanced-data-item strong {
+    margin-top: 3px;
+
+    color: var(--text);
+
+    font-size: 13px;
+
+    line-height: 1.4;
+}
+
+
+/* ============================================================
+   CURRENT IST TIME
+   ============================================================ */
+
+.panchang-current-time {
+    width: min(1180px, calc(100% - 32px));
+
+    margin:
+        30px auto;
+
+    padding: 12px 16px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--text-soft);
+
+    font-size: 12px;
+}
+
+.panchang-current-time strong {
+    color: var(--primary);
+
+    font-size: 13px;
+}
+
+
+/* ============================================================
+   ACTION BUTTONS
+   ============================================================ */
+
+.muhurat-actions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 30px;
+
+    margin-bottom: 50px;
+}
+
+.muhurat-action-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 18px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 11px;
+
+    background: #fff;
+
+    color: var(--primary);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform var(--transition),
+        background var(--transition),
+        color var(--transition);
+}
+
+.muhurat-action-btn:hover {
+    transform:
+        translateY(-2px);
+
+    background:
+        var(--primary);
+
+    color: #fff;
+}
+
+
+/* ============================================================
+   EMPTY DATA
+   ============================================================ */
+
+.choghadiya-empty {
+    padding: 20px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    color: var(--muted);
+
+    background: #fafafa;
+
+    font-size: 13px;
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1000px) {
+
+    .muhurat-hero {
+        grid-template-columns:
+            1fr;
+
+        padding: 32px;
+    }
+
+    .hero-date-card {
+        max-width: 480px;
+    }
+
+    .panchang-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .advanced-panchang {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .rakhi-details-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+    #muhuratPage > section,
+    #muhuratPage > div {
+        width:
+            calc(100% - 20px);
+    }
+
+    .muhurat-hero {
+        width:
+            calc(100% - 20px) !important;
+
+        margin-top: 12px;
+
+        padding: 25px 20px;
+
+        border-radius: 22px;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+
+        letter-spacing: -.8px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-date-card {
+        padding: 18px;
+    }
+
+    .location-selector-card {
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+    }
+
+    .location-selector-content {
+        flex:
+            1 1 calc(100% - 70px);
+    }
+
+    .district-selector {
+        width: 100%;
+
+        min-width: 0;
+    }
+
+    .rakhi-main-card {
+        grid-template-columns:
+            auto 1fr;
+
+        gap: 14px;
+
+        padding: 18px;
+    }
+
+    .rakhi-main-icon {
+        width: 55px;
+        height: 55px;
+
+        font-size: 23px;
+    }
+
+    .rakhi-status {
+        grid-column:
+            1 / -1;
+
+        justify-content: center;
+    }
+
+    .rakhi-details-grid,
+    .panchang-grid,
+    .sunmoon-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .choghadiya-list {
+        grid-template-columns:
+            1fr;
+    }
+
+    .auspicious-grid,
+    .avoid-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    .advanced-panchang {
+        grid-template-columns:
+            1fr;
+    }
+
+    .avoid-section {
+        width:
+            calc(100% - 20px) !important;
+
+        padding: 20px 12px;
+
+        border-radius: 20px;
+    }
+
+    .avoid-period,
+    .auspicious-period,
+    .choghadiya-period {
+        padding: 16px;
+
+        border-radius: 17px;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .muhurat-actions {
+        flex-direction: column;
+
+        width:
+            calc(100% - 20px);
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .muhurat-action-btn {
+        width: 100%;
+    }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 450px) {
+
+    .rakhi-details-grid,
+    .panchang-grid,
+    .sunmoon-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    .hero-date-facts {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .rakhi-time {
+        display: block;
+    }
+
+    .rakhi-time span {
+        display: inline-block;
+
+        margin:
+            2px 4px;
+    }
+
+    .choghadiya-row {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 7px;
+    }
+
+    .choghadiya-row > strong {
+        text-align: left;
+    }
+
+    .next-day-ashubh {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .next-day-ashubh > strong {
+        text-align: left;
+    }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
+
+
+/* ============================================================
+   EXISTING TOP BAR / COUNTDOWN
+   ============================================================ */
+
+.top-bar,
+.topbar,
+.header-top,
+.top-header,
+.site-topbar {
+    min-height: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    z-index: 1000;
+
+    overflow: hidden;
+}
+
+.top-bar .announcement,
+.top-bar .ticker,
+.top-bar .ticker-text,
+.topbar .announcement,
+.topbar .ticker,
+.header-top .announcement,
+.header-top .ticker {
+    max-width: 360px;
+
+    font-size: 12px !important;
+
+    line-height: 1.2;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+}
+
+.top-bar .brand,
+.topbar .brand,
+.header-top .brand {
+    font-size: 10px !important;
+
+    font-weight: 800;
+
+    letter-spacing: .4px;
+}
+
+.top-bar .animated-text,
+.top-bar .typing-text,
+.top-bar .ticker-text,
+.topbar .animated-text,
+.topbar .typing-text,
+.topbar .ticker-text {
+    font-size: 14px !important;
+
+    font-weight: 500;
+}
+
+.countdown,
+.countdown-box,
+.countdown-timer,
+.rakhi-countdown,
+.festival-countdown {
+    position: relative;
+
+    display: inline-flex !important;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    min-height: 34px;
+
+    padding: 5px 13px !important;
+
+    border: 1px solid rgba(255, 204, 0, .75) !important;
+
+    border-radius: 999px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(82, 0, 20, .96),
+            rgba(42, 0, 12, .96)
+        ) !important;
+
+    box-shadow:
+        0 0 0 1px rgba(255, 204, 0, .08),
+        0 4px 18px rgba(0, 0, 0, .25),
+        inset 0 1px 0 rgba(255,255,255,.08);
+
+    color: #fff !important;
+
+    white-space: nowrap;
+
+    z-index: 2;
+}
+
+.countdown-label,
+.countdown-title,
+.countdown .label,
+.countdown-box .label,
+.countdown-timer .label {
+    color: #fff !important;
+
+    font-size: 10px !important;
+
+    font-weight: 800 !important;
+
+    letter-spacing: .35px;
+
+    text-transform: uppercase;
+}
+
+.countdown span,
+.countdown strong,
+.countdown-box span,
+.countdown-box strong,
+.countdown-timer span,
+.countdown-timer strong {
+    color: #ffe000 !important;
+
+    font-size: 13px !important;
+
+    font-weight: 900 !important;
+
+    line-height: 1 !important;
+}
+
+.countdown .number,
+.countdown .time-value,
+.countdown-box .number,
+.countdown-box .time-value,
+.countdown-timer .number,
+.countdown-timer .time-value {
+    min-width: 25px;
+
+    padding: 4px 5px;
+
+    border-radius: 6px;
+
+    background: rgba(255, 204, 0, .10);
+
+    border: 1px solid rgba(255, 204, 0, .22);
+
+    color: #ffe000 !important;
+
+    text-align: center;
+
+    font-size: 13px !important;
+
+    font-weight: 900 !important;
+}
+
+.countdown .separator,
+.countdown .colon,
+.countdown-box .separator,
+.countdown-timer .separator {
+    color: #ffd400 !important;
+
+    font-weight: 900;
+
+    opacity: .9;
+}
+
+.top-bar .date-time,
+.topbar .date-time,
+.header-top .date-time,
+.header-top .datetime,
+.site-topbar .datetime {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 11px !important;
+
+    font-weight: 600;
+
+    color: rgba(255,255,255,.86) !important;
+
+    white-space: nowrap;
+}
+
+.top-bar .date-time strong,
+.topbar .date-time strong,
+.header-top .date-time strong,
+.header-top .datetime strong {
+    color: #fff !important;
+
+    font-size: 11px !important;
+}
+
+.top-bar .support-btn,
+.topbar .support-btn,
+.header-top .support-btn {
+    min-height: 30px !important;
+
+    padding: 6px 13px !important;
+
+    border-radius: 999px !important;
+
+    font-size: 10px !important;
+
+    font-weight: 800 !important;
+
+    transition:
+        transform .22s ease,
+        box-shadow .22s ease,
+        background .22s ease;
+}
+
+.top-bar .support-btn:hover,
+.topbar .support-btn:hover,
+.header-top .support-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 18px rgba(255, 204, 0, .20);
+}
+
+.countdown,
+.countdown *,
+.countdown-box,
+.countdown-box *,
+.countdown-timer,
+.countdown-timer * {
+    user-select: none;
+
+    -webkit-user-select: none;
+}
+
+.countdown::before,
+.countdown-box::before,
+.countdown-timer::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,215,0,.08),
+            transparent
+        );
+
+    pointer-events: none;
+
+    animation:
+        countdownShimmer
+        3.5s ease-in-out infinite;
+}
+
+@keyframes countdownShimmer {
+
+    0% {
+        transform: translateX(-110%);
+    }
+
+    50% {
+        transform: translateX(110%);
+    }
+
+    100% {
+        transform: translateX(110%);
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .top-bar,
+    .topbar,
+    .header-top,
+    .top-header,
+    .site-topbar {
+        height: auto;
+
+        min-height: 44px;
+    }
+
+    .top-bar .announcement,
+    .top-bar .ticker,
+    .topbar .announcement,
+    .topbar .ticker,
+    .header-top .announcement,
+    .header-top .ticker {
+        max-width: 190px;
+    }
+
+    .top-bar .animated-text,
+    .top-bar .typing-text,
+    .topbar .animated-text,
+    .topbar .typing-text {
+        font-size: 11px !important;
+    }
+
+    .countdown,
+    .countdown-box,
+    .countdown-timer {
+        min-height: 30px;
+
+        padding: 4px 8px !important;
+
+        gap: 4px;
+    }
+
+    .countdown-label,
+    .countdown-title,
+    .countdown .label,
+    .countdown-box .label {
+        display: none;
+    }
+
+    .countdown span,
+    .countdown strong,
+    .countdown-box span,
+    .countdown-box strong {
+        font-size: 11px !important;
+    }
+
+    .countdown .number,
+    .countdown .time-value,
+    .countdown-box .number,
+    .countdown-box .time-value {
+        min-width: 21px;
+
+        padding: 3px 4px;
+
+        font-size: 11px !important;
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .top-bar .announcement,
+    .topbar .announcement,
+    .header-top .announcement {
+        max-width: 135px;
+    }
+
+    .top-bar .animated-text,
+    .topbar .animated-text,
+    .header-top .animated-text {
+        font-size: 10px !important;
+    }
+
+    .countdown,
+    .countdown-box,
+    .countdown-timer {
+        padding: 4px 6px !important;
+    }
+
+    .countdown .number,
+    .countdown .time-value,
+    .countdown-box .number,
+    .countdown-box .time-value {
+        min-width: 19px;
+
+        font-size: 10px !important;
+    }
+}
+
+
+/* ============================================================
+   MTR STUDIOS — PREMIUM VISUAL SYSTEM
+   ============================================================ */
+
+:root {
+    --rb-ink: #32161d;
+    --rb-ink-soft: #6d555a;
+
+    --rb-maroon: #7d1839;
+    --rb-maroon-dark: #4f0b22;
+    --rb-maroon-deep: #350713;
+
+    --rb-gold: #c58b22;
+    --rb-gold-bright: #f2cf70;
+    --rb-gold-soft: #fff6dc;
+
+    --rb-green: #177245;
+    --rb-green-deep: #0d5a34;
+    --rb-green-soft: #effaf3;
+
+    --rb-red: #bd342b;
+    --rb-red-deep: #8e1717;
+    --rb-red-soft: #fff2f1;
+
+    --rb-surface: #ffffff;
+    --rb-surface-warm: #fffaf5;
+
+    --rb-border: rgba(125,24,57,.14);
+    --rb-border-gold: rgba(197,139,34,.34);
+
+    --rb-shadow:
+        0 12px 34px rgba(58,24,19,.10);
+
+    --rb-shadow-hover:
+        0 22px 52px rgba(58,24,19,.16);
+
+    --rb-ease:
+        cubic-bezier(.2,.75,.2,1);
+}
+
+
+/* ============================================================
+   PAGE FOUNDATION
+   ============================================================ */
+
+#muhuratPage {
+    color: var(--rb-ink);
+
+    background:
+        radial-gradient(
+            circle at 10% 0%,
+            rgba(197,139,34,.055),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 92% 28%,
+            rgba(125,24,57,.045),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            180deg,
+            #fffaf7 0%,
+            #ffffff 48%,
+            #fffaf7 100%
+        );
+}
+
+#muhuratPage p {
+    color: var(--rb-ink-soft);
+}
+
+#muhuratPage h1,
+#muhuratPage h2,
+#muhuratPage h3,
+#muhuratPage h4,
+#muhuratPage h5,
+#muhuratPage h6 {
+    color: var(--rb-maroon-dark);
+}
+
+#muhuratPage strong {
+    color: var(--rb-maroon);
+}
+
+#muhuratPage small {
+    color: #806b70;
+}
+
+
+/* ============================================================
+   HERO PREMIUM
+   ============================================================ */
+
+#muhuratPage .muhurat-hero {
+    isolation: isolate;
+
+    border:
+        1px solid rgba(255,215,122,.18);
+
+    box-shadow:
+        0 24px 65px rgba(91,13,40,.18);
+
+    transition:
+        transform .45s var(--rb-ease),
+        box-shadow .45s var(--rb-ease);
+}
+
+#muhuratPage .muhurat-hero:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 30px 78px rgba(91,13,40,.22);
+}
+
+#muhuratPage .muhurat-hero::after {
+    box-shadow:
+        0 0 90px rgba(255,215,122,.08);
+}
+
+#muhuratPage .hero-content h1 {
+    text-shadow:
+        0 5px 25px rgba(45,0,15,.18);
+}
+
+#muhuratPage .hero-description {
+    color:
+        rgba(255,255,255,.90);
+}
+
+#muhuratPage .hero-location {
+    color:
+        rgba(255,255,255,.96);
+}
+
+#muhuratPage .hero-location i {
+    color:
+        var(--rb-gold-bright);
+}
+
+#muhuratPage .hero-kicker {
+    color: #fff;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.16);
+
+    backdrop-filter: blur(8px);
+}
+
+#muhuratPage .hero-data-status {
+    border:
+        1px solid rgba(255,255,255,.18);
+
+    color: #fff;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+#muhuratPage .hero-data-status.is-success {
+    color: #ecfff3;
+}
+
+#muhuratPage .hero-data-status.is-error {
+    color: #ffe8e8;
+}
+
+#muhuratPage .hero-data-status.is-loading {
+    color: #fff5d4;
+}
+
+
+/* ============================================================
+   HERO DATE CARD
+   ============================================================ */
+
+#muhuratPage .hero-date-card {
+    border:
+        1px solid rgba(197,139,34,.24);
+
+    background:
+        rgba(255,255,255,.97);
+
+    transition:
+        transform .4s var(--rb-ease),
+        box-shadow .4s var(--rb-ease),
+        border-color .3s ease;
+}
+
+#muhuratPage .hero-date-card:hover {
+    transform:
+        translateY(-6px);
+
+    border-color:
+        rgba(197,139,34,.45);
+
+    box-shadow:
+        0 22px 48px rgba(58,24,19,.15);
+}
+
+#muhuratPage .hero-date-icon {
+    box-shadow:
+        0 8px 20px rgba(125,24,57,.10);
+
+    transition:
+        transform .4s var(--rb-ease),
+        box-shadow .4s ease;
+}
+
+#muhuratPage .hero-date-card:hover
+.hero-date-icon {
+    transform:
+        translateY(-3px)
+        rotate(-4deg)
+        scale(1.05);
+
+    box-shadow:
+        0 12px 24px rgba(125,24,57,.16);
+}
+
+#muhuratPage .hero-date-content span,
+#muhuratPage .hero-date-facts small {
+    color: #776269;
+}
+
+#muhuratPage .hero-date-content strong {
+    color: var(--rb-maroon);
+}
+
+#muhuratPage .hero-date-facts strong {
+    color: var(--rb-ink);
+}
+
+
+/* ============================================================
+   SECTION HEADINGS
+   ============================================================ */
+
+#muhuratPage .section-heading {
+    position: relative;
+}
+
+#muhuratPage .section-kicker {
+    color:
+        var(--rb-green);
+
+    padding:
+        6px 11px;
+
+    border:
+        1px solid rgba(23,114,69,.14);
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(23,114,69,.055);
+}
+
+#muhuratPage .danger-kicker {
+    color:
+        var(--rb-red);
+
+    border-color:
+        rgba(189,52,43,.16);
+
+    background:
+        rgba(189,52,43,.055);
+}
+
+#muhuratPage .section-heading h2 {
+    color:
+        var(--rb-maroon-dark);
+}
+
+#muhuratPage .section-heading h2 span {
+    color:
+        var(--rb-maroon);
+}
+
+#muhuratPage .section-heading p {
+    color:
+        var(--rb-ink-soft);
+}
+
+
+/* ============================================================
+   LOCATION
+   ============================================================ */
+
+#muhuratPage .location-selector-card {
+    border-color:
+        rgba(125,24,57,.13);
+
+    background:
+        rgba(255,255,255,.96);
+
+    box-shadow:
+        var(--rb-shadow);
+
+    transition:
+        transform .35s var(--rb-ease),
+        box-shadow .35s ease,
+        border-color .3s ease;
+}
+
+#muhuratPage .location-selector-card:hover {
+    transform:
+        translateY(-4px);
+
+    border-color:
+        var(--rb-border-gold);
+
+    box-shadow:
+        var(--rb-shadow-hover);
+}
+
+#muhuratPage .location-selector-icon {
+    box-shadow:
+        0 8px 20px rgba(125,24,57,.09);
+
+    transition:
+        transform .35s var(--rb-ease);
+}
+
+#muhuratPage .location-selector-card:hover
+.location-selector-icon {
+    transform:
+        rotate(-5deg)
+        scale(1.06);
+}
+
+#muhuratPage .location-selector-content span {
+    color: #806c71;
+}
+
+#muhuratPage .location-selector-content strong {
+    color: var(--rb-ink);
+}
+
+#muhuratPage .district-selector {
+    color:
+        var(--rb-ink) !important;
+
+    background:
+        #fff !important;
+
+    border-color:
+        rgba(125,24,57,.18);
+
+    box-shadow:
+        0 4px 14px rgba(58,24,19,.04);
+
+    transition:
+        border-color .25s ease,
+        box-shadow .25s ease,
+        transform .25s ease;
+}
+
+#muhuratPage .district-selector:hover {
+    border-color:
+        rgba(197,139,34,.55);
+
+    box-shadow:
+        0 7px 20px rgba(58,24,19,.08);
+}
+
+#muhuratPage .district-selector:focus {
+    border-color:
+        var(--rb-maroon);
+
+    box-shadow:
+        0 0 0 4px rgba(125,24,57,.10),
+        0 8px 20px rgba(58,24,19,.08);
+}
+
+#muhuratPage .district-selector option {
+    color: var(--rb-ink);
+
+    background: #fff;
+}
+
+
+/* ============================================================
+   RAKHI MAIN CARD
+   ============================================================ */
+
+#muhuratPage .rakhi-main-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border-color:
+        rgba(197,139,34,.32);
+
+    box-shadow:
+        var(--rb-shadow);
+
+    transition:
+        transform .42s var(--rb-ease),
+        box-shadow .42s ease,
+        border-color .3s ease;
+}
+
+#muhuratPage .rakhi-main-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            110deg,
+            transparent 0%,
+            rgba(255,255,255,.42) 45%,
+            transparent 62%
+        );
+
+    transform:
+        translateX(-115%);
+
+    transition:
+        transform .85s var(--rb-ease);
+
+    pointer-events: none;
+}
+
+#muhuratPage .rakhi-main-card:hover {
+    transform:
+        translateY(-6px);
+
+    border-color:
+        rgba(197,139,34,.58);
+
+    box-shadow:
+        var(--rb-shadow-hover);
+}
+
+#muhuratPage .rakhi-main-card:hover::before {
+    transform:
+        translateX(115%);
+}
+
+#muhuratPage .rakhi-main-icon {
+    box-shadow:
+        0 10px 25px rgba(197,139,34,.13);
+
+    transition:
+        transform .45s var(--rb-ease),
+        box-shadow .45s ease;
+}
+
+#muhuratPage .rakhi-main-card:hover
+.rakhi-main-icon {
+    transform:
+        rotate(-6deg)
+        scale(1.06);
+
+    box-shadow:
+        0 14px 30px rgba(197,139,34,.22);
+}
+
+#muhuratPage .rakhi-main-content > span {
+    color: #746064;
+}
+
+#muhuratPage .rakhi-time strong {
+    color: var(--rb-maroon);
+}
+
+#muhuratPage .rakhi-time span {
+    color: #806c71;
+}
+
+#muhuratPage .rakhi-duration {
+    color: #6f5b60;
+}
+
+#muhuratPage .rakhi-duration strong {
+    color: var(--rb-ink);
+}
+
+#muhuratPage .rakhi-status {
+    border:
+        1px solid rgba(23,114,69,.16);
+
+    box-shadow:
+        0 6px 18px rgba(23,114,69,.08);
+}
+
+
+/* ============================================================
+   DETAIL / PANCHANG / SUNMOON / ADVANCED CARDS
+   ============================================================ */
+
+#muhuratPage .detail-card,
+#muhuratPage .panchang-card,
+#muhuratPage .sunmoon-card,
+#muhuratPage .advanced-data-item {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        rgba(255,255,255,.98);
+
+    border-color:
+        rgba(125,24,57,.12);
+
+    transition:
+        transform .4s var(--rb-ease),
+        box-shadow .4s ease,
+        border-color .3s ease;
+}
+
+#muhuratPage .detail-card::after,
+#muhuratPage .panchang-card::after,
+#muhuratPage .sunmoon-card::before,
+#muhuratPage .advanced-data-item::after {
+    content: "";
+
+    position: absolute;
+
+    top: -80%;
+    left: -70%;
+
+    width: 38%;
+    height: 260%;
+
+    transform:
+        rotate(22deg);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.58),
+            transparent
+        );
+
+    transition:
+        left .8s var(--rb-ease);
+
+    pointer-events: none;
+}
+
+#muhuratPage .detail-card:hover,
+#muhuratPage .panchang-card:hover,
+#muhuratPage .sunmoon-card:hover,
+#muhuratPage .advanced-data-item:hover {
+    transform:
+        translateY(-6px);
+
+    border-color:
+        rgba(197,139,34,.38);
+
+    box-shadow:
+        var(--rb-shadow-hover);
+}
+
+#muhuratPage .detail-card:hover::after,
+#muhuratPage .panchang-card:hover::after,
+#muhuratPage .sunmoon-card:hover::before,
+#muhuratPage .advanced-data-item:hover::after {
+    left: 135%;
+}
+
+#muhuratPage .detail-card-content span,
+#muhuratPage .panchang-card > span,
+#muhuratPage .sunmoon-card > span,
+#muhuratPage .advanced-data-item span {
+    color: #806b70;
+}
+
+#muhuratPage .detail-card-content strong,
+#muhuratPage .panchang-card > strong,
+#muhuratPage .sunmoon-card > strong,
+#muhuratPage .advanced-data-item strong {
+    color: var(--rb-ink);
+}
+
+#muhuratPage .panchang-card > small {
+    color: var(--rb-maroon);
+}
+
+#muhuratPage .panchang-card > em {
+    color: #806b70;
+}
+
+#muhuratPage .panchang-location,
+#muhuratPage .sunrise-location {
+    color: #806b70;
+}
+
+
+/* ============================================================
+   CHOGHADIYA PREMIUM
+   ============================================================ */
+
+#muhuratPage .choghadiya-period {
+    border-color:
+        rgba(125,24,57,.12);
+
+    box-shadow:
+        var(--rb-shadow);
+}
+
+#muhuratPage .choghadiya-period-heading h3 {
+    color:
+        var(--rb-maroon-dark);
+}
+
+#muhuratPage .choghadiya-period-heading span {
+    color:
+        #806b70;
+}
+
+#muhuratPage .choghadiya-row {
+    position: relative;
+
+    overflow: hidden;
+
+    border-color:
+        rgba(125,24,57,.09);
+
+    transition:
+        transform .3s var(--rb-ease),
+        box-shadow .3s ease,
+        border-color .25s ease;
+}
+
+#muhuratPage .choghadiya-row::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0 auto 0 0;
+
+    width: 3px;
+
+    background:
+        transparent;
+
+    transition:
+        background .25s ease,
+        box-shadow .25s ease;
+}
+
+#muhuratPage .choghadiya-row:hover {
+    transform:
+        translateX(4px);
+
+    box-shadow:
+        0 10px 22px rgba(58,24,19,.08);
+}
+
+#muhuratPage .choghadiya-row:hover::after {
+    background:
+        var(--rb-gold);
+
+    box-shadow:
+        0 0 12px rgba(197,139,34,.35);
+}
+
+#muhuratPage .choghadiya-name span {
+    color: var(--rb-ink);
+}
+
+#muhuratPage .choghadiya-name small {
+    color: #806b70;
+}
+
+#muhuratPage .choghadiya-row > strong {
+    color: var(--rb-ink);
+}
+
+#muhuratPage .choghadiya-row.best {
+    border-color:
+        rgba(23,114,69,.22);
+}
+
+#muhuratPage .choghadiya-row.good {
+    border-color:
+        rgba(23,114,69,.16);
+}
+
+#muhuratPage .choghadiya-row.bad {
+    border-color:
+        rgba(189,52,43,.20);
+}
+
+#muhuratPage .choghadiya-row.best:hover::after,
+#muhuratPage .choghadiya-row.good:hover::after {
+    background:
+        var(--rb-green);
+}
+
+#muhuratPage .choghadiya-row.bad:hover::after {
+    background:
+        var(--rb-red);
+}
+
+#muhuratPage .choghadiya-empty {
+    color: #766166;
+}
+
+
+/* ============================================================
+   SHUBH PREMIUM
+   ============================================================ */
+
+#muhuratPage .auspicious-period {
+    border-color:
+        rgba(23,114,69,.18);
+
+    box-shadow:
+        var(--rb-shadow);
+}
+
+#muhuratPage .auspicious-period-heading h3 {
+    color:
+        var(--rb-green-deep);
+}
+
+#muhuratPage .auspicious-period-heading span {
+    color:
+        #6e7f73;
+}
+
+#muhuratPage .auspicious-card {
+    border-color:
+        rgba(23,114,69,.17);
+
+    box-shadow:
+        0 7px 20px rgba(23,114,69,.07);
+
+    transition:
+        transform .42s var(--rb-ease),
+        box-shadow .42s ease,
+        border-color .3s ease;
+}
+
+#muhuratPage .auspicious-card:hover {
+    transform:
+        translateY(-8px)
+        scale(1.012);
+
+    border-color:
+        rgba(197,139,34,.55);
+
+    box-shadow:
+        0 22px 42px rgba(23,114,69,.13),
+        0 0 0 1px rgba(197,139,34,.08);
+}
+
+#muhuratPage .auspicious-card > span {
+    color:
+        var(--rb-ink);
+}
+
+#muhuratPage .auspicious-card > small {
+    color:
+        #738078;
+}
+
+#muhuratPage .auspicious-card > strong {
+    color:
+        var(--rb-green-deep);
+}
+
+#muhuratPage .auspicious-card > i {
+    transition:
+        transform .4s var(--rb-ease),
+        box-shadow .4s ease;
+}
+
+#muhuratPage .auspicious-card:hover > i {
+    transform:
+        translateY(-3px)
+        rotate(-5deg)
+        scale(1.08);
+
+    box-shadow:
+        0 9px 20px rgba(23,114,69,.15);
+}
+
+
+/* ============================================================
+   ASHUBH PREMIUM
+   ============================================================ */
+
+#muhuratPage .avoid-section {
+    border-color:
+        rgba(189,52,43,.16);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.8);
+}
+
+#muhuratPage .avoid-period {
+    border-color:
+        rgba(189,52,43,.16);
+
+    box-shadow:
+        0 9px 26px rgba(189,52,43,.055);
+}
+
+#muhuratPage .avoid-period-heading h3 {
+    color:
+        var(--rb-red-deep);
+}
+
+#muhuratPage .avoid-period-heading span {
+    color:
+        #846d70;
+}
+
+#muhuratPage .avoid-card {
+    border-color:
+        rgba(189,52,43,.18);
+
+    transition:
+        transform .42s var(--rb-ease),
+        box-shadow .42s ease,
+        border-color .3s ease;
+}
+
+#muhuratPage .avoid-card:hover {
+    transform:
+        translateY(-8px)
+        scale(1.012);
+
+    border-color:
+        rgba(189,52,43,.48);
+
+    box-shadow:
+        0 22px 42px rgba(189,52,43,.12),
+        0 0 0 1px rgba(189,52,43,.05);
+}
+
+#muhuratPage .avoid-card > span {
+    color:
+        var(--rb-ink);
+}
+
+#muhuratPage .avoid-card > small {
+    color:
+        #846d70;
+}
+
+#muhuratPage .avoid-card > strong {
+    color:
+        var(--rb-red-deep);
+}
+
+#muhuratPage .avoid-card > div {
+    transition:
+        transform .4s var(--rb-ease),
+        box-shadow .4s ease;
+}
+
+#muhuratPage .avoid-card:hover > div {
+    transform:
+        translateY(-3px)
+        rotate(5deg)
+        scale(1.08);
+
+    box-shadow:
+        0 9px 20px rgba(189,52,43,.15);
+}
+
+#muhuratPage .next-day-ashubh {
+    border-color:
+        rgba(189,52,43,.28);
+}
+
+#muhuratPage .next-day-ashubh > span {
+    color:
+        #705b60;
+}
+
+#muhuratPage .next-day-ashubh > strong {
+    color:
+        var(--rb-red-deep);
+}
+
+
+/* ============================================================
+   CURRENT TIME
+   ============================================================ */
+
+#muhuratPage .panchang-current-time {
+    color:
+        #735f64;
+
+    border:
+        1px solid rgba(125,24,57,.10);
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(255,255,255,.75);
+}
+
+#muhuratPage .panchang-current-time strong {
+    color:
+        var(--rb-maroon);
+}
+
+
+/* ============================================================
+   ACTION BUTTONS PREMIUM
+   ============================================================ */
+
+#muhuratPage .muhurat-actions {
+    position: relative;
+}
+
+#muhuratPage .muhurat-action-btn {
+    position: relative;
+
+    overflow: hidden;
+
+    border-color:
+        rgba(125,24,57,.16);
+
+    color:
+        var(--rb-maroon);
+
+    background:
+        #fff;
+
+    transition:
+        transform .35s var(--rb-ease),
+        box-shadow .35s ease,
+        color .25s ease,
+        background .25s ease;
+}
+
+#muhuratPage .muhurat-action-btn::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 65%;
+    height: 100%;
+
+    transform:
+        skewX(-20deg);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.32),
+            transparent
+        );
+
+    transition:
+        left .65s var(--rb-ease);
+}
+
+#muhuratPage .muhurat-action-btn:hover {
+    transform:
+        translateY(-4px);
+
+    color:
+        #fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--rb-maroon),
+            #a42b50
+        );
+
+    border-color:
+        transparent;
+
+    box-shadow:
+        0 15px 30px rgba(125,24,57,.22),
+        0 0 0 1px rgba(197,139,34,.12);
+}
+
+#muhuratPage .muhurat-action-btn:hover::before {
+    left: 130%;
+}
+
+#muhuratPage .muhurat-action-btn:active {
+    transform:
+        translateY(-1px)
+        scale(.985);
+}
+
+
+/* ============================================================
+   MUHURAT HEADER / COUNTDOWN — SCOPED
+   Home page will not receive these styles.
+   ============================================================ */
+
+html:has(#muhuratPage) .top-bar,
+html:has(#muhuratPage) .topbar,
+html:has(#muhuratPage) .header-top,
+html:has(#muhuratPage) .top-header,
+html:has(#muhuratPage) .site-topbar {
+    min-height: 46px;
+
+    height: 46px;
+
+    position: relative;
+
+    z-index: 9999;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #310711,
+            #5b0d27 52%,
+            #300611
+        ) !important;
+
+    border-bottom:
+        1px solid rgba(242,207,112,.22) !important;
+
+    box-shadow:
+        0 4px 18px rgba(35,4,13,.20);
+}
+
+html:has(#muhuratPage)
+.top-bar .ticker,
+html:has(#muhuratPage)
+.topbar .ticker,
+html:has(#muhuratPage)
+.header-top .ticker,
+html:has(#muhuratPage)
+.top-bar .ticker-text,
+html:has(#muhuratPage)
+.topbar .ticker-text,
+html:has(#muhuratPage)
+.header-top .ticker-text,
+html:has(#muhuratPage)
+.top-bar .announcement,
+html:has(#muhuratPage)
+.topbar .announcement,
+html:has(#muhuratPage)
+.header-top .announcement,
+html:has(#muhuratPage)
+.top-bar .animated-text,
+html:has(#muhuratPage)
+.topbar .animated-text,
+html:has(#muhuratPage)
+.header-top .animated-text,
+html:has(#muhuratPage)
+.top-bar .typing-text,
+html:has(#muhuratPage)
+.topbar .typing-text,
+html:has(#muhuratPage)
+.header-top .typing-text {
+    color:
+        rgba(255,255,255,.92) !important;
+
+    font-size:
+        12px !important;
+
+    line-height:
+        1.15;
+}
+
+html:has(#muhuratPage)
+.top-bar .brand,
+html:has(#muhuratPage)
+.topbar .brand,
+html:has(#muhuratPage)
+.header-top .brand {
+    color:
+        var(--rb-gold-bright) !important;
+
+    font-size:
+        10px !important;
+
+    font-weight:
+        900 !important;
+}
+
+html:has(#muhuratPage)
+.countdown,
+html:has(#muhuratPage)
+.countdown-box,
+html:has(#muhuratPage)
+.countdown-timer,
+html:has(#muhuratPage)
+.rakhi-countdown,
+html:has(#muhuratPage)
+.festival-countdown {
+    position: relative;
+
+    display: inline-flex !important;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    min-height: 33px;
+
+    padding: 4px 10px !important;
+
+    border:
+        1px solid rgba(242,207,112,.72) !important;
+
+    border-radius:
+        999px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #5a0d25,
+            #350713
+        ) !important;
+
+    box-shadow:
+        0 5px 18px rgba(0,0,0,.24),
+        inset 0 1px 0 rgba(255,255,255,.09);
+
+    color:
+        #fff !important;
+
+    overflow:
+        hidden;
+}
+
+html:has(#muhuratPage)
+.countdown span,
+html:has(#muhuratPage)
+.countdown strong,
+html:has(#muhuratPage)
+.countdown-box span,
+html:has(#muhuratPage)
+.countdown-box strong,
+html:has(#muhuratPage)
+.countdown-timer span,
+html:has(#muhuratPage)
+.countdown-timer strong {
+    color:
+        var(--rb-gold-bright) !important;
+
+    font-size:
+        12px !important;
+
+    font-weight:
+        900 !important;
+
+    line-height:
+        1 !important;
+}
+
+html:has(#muhuratPage)
+.countdown .number,
+html:has(#muhuratPage)
+.countdown .time-value,
+html:has(#muhuratPage)
+.countdown-box .number,
+html:has(#muhuratPage)
+.countdown-box .time-value,
+html:has(#muhuratPage)
+.countdown-timer .number,
+html:has(#muhuratPage)
+.countdown-timer .time-value {
+    min-width:
+        24px;
+
+    padding:
+        4px 5px;
+
+    border-radius:
+        6px;
+
+    border:
+        1px solid rgba(242,207,112,.20);
+
+    background:
+        rgba(242,207,112,.09);
+
+    color:
+        var(--rb-gold-bright) !important;
+
+    text-align:
+        center;
+}
+
+html:has(#muhuratPage)
+.countdown-label,
+html:has(#muhuratPage)
+.countdown-title,
+html:has(#muhuratPage)
+.countdown .label,
+html:has(#muhuratPage)
+.countdown-box .label,
+html:has(#muhuratPage)
+.countdown-timer .label {
+    color:
+        #fff !important;
+
+    font-size:
+        9px !important;
+
+    font-weight:
+        800 !important;
+}
+
+html:has(#muhuratPage)
+.countdown::after,
+html:has(#muhuratPage)
+.countdown-box::after,
+html:has(#muhuratPage)
+.countdown-timer::after {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0 auto 0 -45%;
+
+    width:
+        28%;
+
+    transform:
+        skewX(-18deg);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.15),
+            transparent
+        );
+
+    animation:
+        rb-countdown-shine
+        4.2s ease-in-out infinite;
+
+    pointer-events:
+        none;
+}
+
+@keyframes rb-countdown-shine {
+
+    0%,
+    55% {
+        left:
+            -45%;
+    }
+
+    75%,
+    100% {
+        left:
+            125%;
+    }
+
+}
+
+html:has(#muhuratPage)
+.top-bar .date-time,
+html:has(#muhuratPage)
+.topbar .date-time,
+html:has(#muhuratPage)
+.header-top .date-time,
+html:has(#muhuratPage)
+.top-bar .datetime,
+html:has(#muhuratPage)
+.topbar .datetime,
+html:has(#muhuratPage)
+.header-top .datetime {
+    color:
+        rgba(255,255,255,.88) !important;
+
+    font-size:
+        10px !important;
+}
+
+html:has(#muhuratPage)
+.top-bar .support-btn,
+html:has(#muhuratPage)
+.topbar .support-btn,
+html:has(#muhuratPage)
+.header-top .support-btn {
+    min-height:
+        29px !important;
+
+    padding:
+        5px 12px !important;
+
+    border-radius:
+        999px !important;
+
+    color:
+        #3b0715 !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f2cf70,
+            #c58b22
+        ) !important;
+
+    border:
+        0 !important;
+
+    font-size:
+        9px !important;
+
+    font-weight:
+        900 !important;
+
+    transition:
+        transform .3s var(--rb-ease),
+        box-shadow .3s ease,
+        filter .25s ease;
+}
+
+html:has(#muhuratPage)
+.top-bar .support-btn:hover,
+html:has(#muhuratPage)
+.topbar .support-btn:hover,
+html:has(#muhuratPage)
+.header-top .support-btn:hover {
+    transform:
+        translateY(-2px);
+
+    filter:
+        brightness(1.06);
+
+    box-shadow:
+        0 9px 20px rgba(242,207,112,.22);
+}
+
+
+/* ============================================================
+   FOCUS / ACCESSIBILITY
+   ============================================================ */
+
+#muhuratPage a,
+#muhuratPage button,
+#muhuratPage select {
+    -webkit-tap-highlight-color:
+        transparent;
+}
+
+#muhuratPage a:focus-visible,
+#muhuratPage button:focus-visible,
+#muhuratPage select:focus-visible {
+    outline:
+        3px solid rgba(197,139,34,.38);
+
+    outline-offset:
+        3px;
+}
+
+
+/* ============================================================
+   REAL HOVER DEVICES ONLY
+   ============================================================ */
+
+@media (hover: hover) and (pointer: fine) {
+
+    #muhuratPage
+    .detail-card:hover
+    .detail-card-icon,
+
+    #muhuratPage
+    .panchang-card:hover
+    .panchang-card-icon,
+
+    #muhuratPage
+    .sunmoon-card:hover
+    .sunmoon-icon {
+        transform:
+            translateY(-3px)
+            scale(1.06);
+    }
+
+}
+
+
+/* ============================================================
+   RESPONSIVE POLISH
+   ============================================================ */
+
+@media (max-width: 1000px) {
+
+    #muhuratPage .rakhi-main-card {
+        gap: 18px;
+    }
+
+    #muhuratPage .auspicious-card,
+    #muhuratPage .avoid-card {
+        min-height: 145px;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    #muhuratPage .muhurat-hero:hover,
+    #muhuratPage .rakhi-main-card:hover,
+    #muhuratPage .detail-card:hover,
+    #muhuratPage .panchang-card:hover,
+    #muhuratPage .sunmoon-card:hover,
+    #muhuratPage .advanced-data-item:hover {
+        transform:
+            none;
+    }
+
+    #muhuratPage .choghadiya-row:hover {
+        transform:
+            none;
+    }
+
+    #muhuratPage .auspicious-card:hover,
+    #muhuratPage .avoid-card:hover {
+        transform:
+            none;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    html:has(#muhuratPage)
+    .top-bar,
+
+    html:has(#muhuratPage)
+    .topbar,
+
+    html:has(#muhuratPage)
+    .header-top,
+
+    html:has(#muhuratPage)
+    .top-header,
+
+    html:has(#muhuratPage)
+    .site-topbar {
+        min-height:
+            42px;
+
+        height:
+            auto;
+    }
+
+    html:has(#muhuratPage)
+    .top-bar .date-time,
+
+    html:has(#muhuratPage)
+    .topbar .date-time,
+
+    html:has(#muhuratPage)
+    .header-top .date-time,
+
+    html:has(#muhuratPage)
+    .top-bar .datetime,
+
+    html:has(#muhuratPage)
+    .topbar .datetime,
+
+    html:has(#muhuratPage)
+    .header-top .datetime {
+        display:
+            none;
+    }
+
+    html:has(#muhuratPage)
+    .top-bar .ticker,
+
+    html:has(#muhuratPage)
+    .topbar .ticker,
+
+    html:has(#muhuratPage)
+    .header-top .ticker,
+
+    html:has(#muhuratPage)
+    .top-bar .ticker-text,
+
+    html:has(#muhuratPage)
+    .topbar .ticker-text,
+
+    html:has(#muhuratPage)
+    .header-top .ticker-text {
+        font-size:
+            10px !important;
+    }
+
+    html:has(#muhuratPage)
+    .countdown,
+
+    html:has(#muhuratPage)
+    .countdown-box,
+
+    html:has(#muhuratPage)
+    .countdown-timer {
+        min-height:
+            29px;
+
+        padding:
+            3px 6px !important;
+
+        gap:
+            3px;
+    }
+
+    html:has(#muhuratPage)
+    .countdown .number,
+
+    html:has(#muhuratPage)
+    .countdown .time-value,
+
+    html:has(#muhuratPage)
+    .countdown-box .number,
+
+    html:has(#muhuratPage)
+    .countdown-box .time-value {
+        min-width:
+            19px;
+
+        padding:
+            3px;
+
+        font-size:
+            10px !important;
+    }
+
+}
+
+
+/* ============================================================
+   FINAL REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #muhuratPage *,
+    #muhuratPage *::before,
+    #muhuratPage *::after,
+
+    html:has(#muhuratPage)
+    .countdown::after,
+
+    html:has(#muhuratPage)
+    .countdown-box::after,
+
+    html:has(#muhuratPage)
+    .countdown-timer::after {
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+        scroll-behavior:
+            auto !important;
+    }
+
+}

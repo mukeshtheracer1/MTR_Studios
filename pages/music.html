@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTR Studios | Music Album</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Noto+Serif+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../assets/css/global.css">
+
+    <!-- Page Specific CSS -->
+    <link rel="stylesheet" href="music.css">
+</head>
+
+<body>
+
+    <!-- Dynamic Layout Placeholders (Managed by app-loader.js) -->
+    <div id="top-bar-placeholder"></div>
+    <div id="header-placeholder"></div>
+
+    <main class="music-page">
+
+        <!-- HERO SECTION -->
+        <section class="music-hero">
+            <div class="hero-bg-glow"></div>
+            <div class="hero-container">
+                <span class="music-badge">
+                    <i class="fa-solid fa-compact-disc fa-spin"></i> स्पेशल म्यूजिक कलेक्शन
+                </span>
+                <h1 class="hero-title">
+                    सुरों में पिरोया <span class="gold-gradient">भाई-बहन का प्यार</span>
+                </h1>
+                <p class="hero-desc">
+                    रक्षाबंधन के इस पावन अवसर पर सुनें 20 चुनिंदा और दिल को छू लेने वाले भक्ति व रक्षाबंधन गीत। 
+                    ऑनलाइन सुनें या HD ऑडियो में डाउनलोड करें।
+                </p>
+            </div>
+        </section>
+
+        <!-- MUSIC PLAYER & GRID SECTION -->
+        <section class="music-content-section">
+            <div class="container">
+                
+                <!-- Category Filters -->
+                <div class="filter-bar">
+                    <button class="filter-btn active" data-filter="all">सभी गीत (20)</button>
+                    <button class="filter-btn" data-filter="rakhi">रक्षाबंधन स्पेशल</button>
+                    <button class="filter-btn" data-filter="bhakti">भक्ति एवं मंत्र</button>
+                </div>
+
+                <!-- 20 Songs Dynamic Grid -->
+                <div class="songs-grid" id="songsGrid">
+                    <!-- JavaScript will dynamically render 20 song cards here -->
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FIXED BOTTOM AUDIO PLAYER STICKY DOCK -->
+    <div class="sticky-player" id="stickyPlayer">
+        <div class="player-container">
+            <div class="player-track-info">
+                <img src="../assets/images/placeholder.jpg" alt="Now Playing" id="playerThumb" class="player-thumb">
+                <div class="track-details">
+                    <h4 id="playerTitle">कोई गाना नहीं चुना गया</h4>
+                    <p id="playerArtist">MTR Studios</p>
+                </div>
+            </div>
+
+            <div class="player-controls">
+                <div class="control-buttons">
+                    <button id="prevBtn" class="control-btn" title="पिछला गाना"><i class="fa-solid fa-backward-step"></i></button>
+                    <button id="mainPlayBtn" class="control-btn play-main" title="चलाएं/रोकें"><i class="fa-solid fa-play"></i></button>
+                    <button id="nextBtn" class="control-btn" title="अगला गाना"><i class="fa-solid fa-forward-step"></i></button>
+                </div>
+                <div class="progress-bar-wrapper">
+                    <span id="currentTime">00:00</span>
+                    <input type="range" id="progressBar" value="0" min="0" step="1">
+                    <span id="duration">00:00</span>
+                </div>
+            </div>
+
+            <div class="player-actions">
+                <a href="#" id="playerDownloadBtn" class="player-download-btn" download title="डाउनलोड करें">
+                    <i class="fa-solid fa-download"></i> <span>डाउनलोड</span>
+                </a>
+            </div>
+        </div>
+        <!-- Hidden Native Audio Tag -->
+        <audio id="audioEngine" preload="metadata"></audio>
+    </div>
+
+    <!-- Dynamic Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Application Loader JS -->
+    <script src="../assets/js/app-loader.js"></script>
+    <!-- Music Logic JS -->
+    <script src="music.js"></script>
+</body>
+
+</html>

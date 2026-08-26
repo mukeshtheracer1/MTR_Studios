@@ -1,0 +1,238 @@
+/* ==========================================================================
+   COMING SOON PAGE STYLES - MTR STUDIOS
+   ========================================================================== */
+
+:root {
+    --cs-bg: #100307;
+    --cs-card-bg: rgba(28, 8, 14, 0.7);
+    --cs-gold: #d4af37;
+    --cs-gold-light: #f3e5ab;
+    --cs-crimson: #800020;
+    --cs-text: #fcf8f2;
+    --cs-muted: #d1b8c0;
+    --cs-border: rgba(212, 175, 55, 0.25);
+}
+
+body.coming-soon-page {
+    background-color: var(--cs-bg);
+    color: var(--cs-text);
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+/* Background Glowing Effect */
+.cs-main {
+    position: relative;
+    padding: 80px 20px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.cs-glow-bg {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(128, 0, 32, 0.45) 0%, rgba(16, 3, 7, 0) 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Central Card Structure */
+.cs-container {
+    position: relative;
+    z-index: 1;
+    max-width: 750px;
+    width: 100%;
+    text-align: center;
+    background: var(--cs-card-bg);
+    border: 1px solid var(--cs-border);
+    backdrop-filter: blur(16px);
+    border-radius: 24px;
+    padding: 50px 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* Top Badge */
+.cs-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid var(--cs-gold);
+    color: var(--cs-gold);
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+}
+
+/* Headings */
+.cs-title {
+    font-family: 'Noto Serif Devanagari', serif;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.cs-gold-text {
+    font-family: 'Dancing Script', cursive;
+    background: linear-gradient(135deg, #ffffff 0%, var(--cs-gold-light) 50%, var(--cs-gold) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: clamp(2.8rem, 6vw, 4.2rem);
+}
+
+.cs-subtitle {
+    color: var(--cs-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 36px;
+}
+
+/* Animated Countdown Timer */
+.cs-countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.time-box {
+    background: rgba(128, 0, 32, 0.25);
+    border: 1px solid var(--cs-border);
+    border-radius: 14px;
+    padding: 14px 18px;
+    min-width: 75px;
+}
+
+.time-box span {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--cs-gold);
+    font-family: monospace;
+}
+
+.time-box label {
+    font-size: 0.75rem;
+    color: var(--cs-muted);
+    text-transform: uppercase;
+}
+
+.time-separator {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--cs-gold);
+}
+
+/* Buttons */
+.cs-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+}
+
+.cs-btn {
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.cs-btn-primary {
+    background: var(--cs-crimson);
+    color: #ffffff;
+    border: 1px solid var(--cs-gold);
+}
+
+.cs-btn-primary:hover {
+    background: var(--cs-gold);
+    color: #100307;
+    transform: translateY(-3px);
+}
+
+.cs-btn-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--cs-text);
+    border: 1px solid var(--cs-border);
+}
+
+.cs-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--cs-gold);
+    transform: translateY(-3px);
+}
+
+/* Notification Subscription Input */
+.cs-notify-box {
+    border-top: 1px dashed var(--cs-border);
+    padding-top: 24px;
+}
+
+.cs-notify-box p {
+    font-size: 0.85rem;
+    color: var(--cs-muted);
+    margin-bottom: 12px;
+}
+
+.cs-form {
+    display: flex;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 50px;
+    overflow: hidden;
+    border: 1px solid var(--cs-border);
+}
+
+.cs-form input {
+    flex-grow: 1;
+    background: rgba(0, 0, 0, 0.4);
+    border: none;
+    padding: 12px 20px;
+    color: #fff;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.cs-form button {
+    background: var(--cs-gold);
+    color: #100307;
+    border: none;
+    padding: 0 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.cs-form button:hover {
+    background: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .cs-container { padding: 35px 18px; }
+    .cs-countdown { gap: 6px; }
+    .time-box { min-width: 55px; padding: 10px 8px; }
+    .time-box span { font-size: 1.4rem; }
+    .time-separator { font-size: 1.2rem; }
+}
